@@ -16,13 +16,29 @@ In versions prior to Drupal 8, data was simply stored in the database and the la
 
 Since Drupal 8, the configuration system (CS) is, therefore, an indispensable tool.
 
-There are two kinds of configuration: simple and complex. Simple configuration is always singular (there is only one instance of itself). A good example for this is the site name and email value items, which are stored inside such a configuration item. There is a singular instance of these value items, because probably there is no need for more. While in the case of a View definition, it follows a certain schema and we can have not a singular one, but multiple View definitions. For this reason, View definition implies a complex configuration.
+There are two types of configuration: simple and configuration entities. In this [article](https://www.drupal.org/node/2120523#s-simple-configuration-vs-configuration-entities), you can have a more deep analysis of this.\
+\
+Configuration entities is a type of configuration which you would empower a user to create and configure one or more times, in order to be used in some other configuration form, like image styles or views.
 
 ### What is configuration for?
 
 Configuration is used for storing everything that has to be synchronized between different environments.
 
+The typical flow is for the active site configuration to be synchronized with the one in the YAML files. This means importing all the configurations which are new or different in the YAML files into the database. These YAML files are inside the configuration sync folder, which should be committed to Git (you can configure in the `settings.php`, which directory should be the`sync` folder) and the opposite is to export the active configuration to the YAML files in order to commit them into code.
 
+The UI allows you to compare the configuration uploaded to your sync directory with the active one on the database by providing you with a nice Diff interface.\
+\
+Then, you synchronize either in the UI as we've seen, or through Drush.\
+\
+You should check the configuration status regularly with the commands, bellow:\
+`docker-compose exec web ./vendor/bin/drush config:status`
+
+To export to sync directory, your changes into the DB:\
+`docker-compose exec web ./vendor/bin/drush cex`
+
+To import configuration from sync directory, overriding your changes in the DB: Execute: docker-`docker-compose exec web ./vendor/bin/drush cim`
+
+``
 
 Key concepts of the CMI (Configuration Management Initiative):\
 \
