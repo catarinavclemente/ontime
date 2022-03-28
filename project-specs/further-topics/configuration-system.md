@@ -51,9 +51,10 @@ However, with optional configuration, you can provide configuration files with t
 
 ****
 
+### Schema
 
-
-
+Schema allows various systems to interact properly with the configuration items. They are a way to define the configuration items and specify what kind of data they store (strings, Booleans, integers and so on).\
+The **schema** or structure for the image style configuration entity is defined in _core/modules/image/config/schema/image.schema.yml_.
 
 Key concepts of the CMI (Configuration Management Initiative):\
 \
@@ -64,3 +65,7 @@ Because of this, new environments for a same site, need to be created as clones.
 
 **Sources**\
 Sipos, D. (2020). **Drupal 9 Module Development**: Get up and running with building powerful Drupal modules and applications (3rd Edition). Packt Publishing Ltd.\\
+
+[https://drupalize.me/tutorial/what-are-configuration-entitie](https://drupalize.me/tutorial/what-are-configuration-entitie)
+
+[https://www.drupal.org/node/2120523#s-simple-configuration-vs-configuration-entities](https://www.drupal.org/node/2120523#s-simple-configuration-vs-configuration-entities)
