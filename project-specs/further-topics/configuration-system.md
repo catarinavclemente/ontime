@@ -38,7 +38,22 @@ To export to sync directory, your changes into the DB:\
 
 To import configuration from sync directory, overriding your changes in the DB: Execute: docker-`docker-compose exec web ./vendor/bin/drush cim`
 
-``
+### Configuration storage
+
+Configuration can be stored either in YAML files (the sync storage) or in the database (the active storage).
+
+If a configuration is mandatory for our code to work, we can create it upon module installation.\
+There are two ways this can be done:\
+**Statically (most common way):** including YAML files in a config/install folder of the module, so that they get imported when the module is installed.\
+**Dynamically (if the values we need to set in the configuration must be retrieved dynamically):** implementing a hook\_install(), so that we can try to get our value and create the configuration object containing it.
+
+However, with optional configuration, you can provide configuration files with the module that should only be imported if their dependencies are met. Meaning that if the dependencies of these configurations are not met (modules, themes and other configurations), the module will install correctly but without those configurations.
+
+****
+
+
+
+
 
 Key concepts of the CMI (Configuration Management Initiative):\
 \
