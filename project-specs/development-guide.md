@@ -43,19 +43,17 @@ sudo mv composer.phar /usr/local/bin/composer
 
 #### Docker Compose
 
-Run this command to download the current stable release of Docker Compose:
+Run this command to download the current stable release of Docker Compose: \
+&#x20;`$ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/`
 
-```
-$ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/
-```
+Apply executable permissions to the binary:\
+`$ sudo chmod +x /usr/local/bin/docker-compose`
 
-Apply executable permissions to the binary:
-
-```
 If the command docker-compose fails after installation, check your path. You can also create a symbolic link to /usr/bin or any other directory in your path.
+
+```
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 $ sudo chmod +x /usr/local/bin/docker-compose
-
 ```
 
 **Using Docker Compose**
@@ -76,11 +74,8 @@ In order to tweak settings or adjust configuration of a specific container, plea
 
 To install locally a project running Toolkit 4 you should run the following commands:
 
-Start by cloning GIT reference repo
-
-```
-git clone git@github.com:ec-europa/<repository-name>.git
-```
+Start by cloning GIT reference repo:\
+`git clone git@github.com:ec-europa/<repository-name>.git`
 
 #### Configuring the project
 
