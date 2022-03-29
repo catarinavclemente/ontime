@@ -74,6 +74,7 @@ docker-compose up -d
 This will set up and run the environment. After spawning, please follow the set of commands specified in the documentation of a given component, site or a project. Usually the next step is to execute Composer script to download and set up dependencies.
 
 ```
+docker-compose exec web ./vendor/bin/run drupal:site-install
 docker-compose exec web composer install
 ```
 
