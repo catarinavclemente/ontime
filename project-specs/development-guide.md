@@ -102,7 +102,6 @@ And then:
 
 ```
 docker-compose exec web composer install
-docker-compose exec web vendor/bin/run drupal:site-install
 docker-compose exec web ./vendor/bin/run toolkit:build-dev
 ```
 
