@@ -14,11 +14,12 @@ In versions prior to Drupal 8, data was simply stored in the database and the la
 
 Since Drupal 8, the configuration system (CS) is, therefore, an indispensable tool.
 
-There are two types of configuration: simple and configuration entities. In tbetterWorld21
+The configuration API comes in two flavors - the (simple) Config API and the Configuration Entity API. The key difference is that the Config API is the singleton use case. A singleton is where there can be only a single instance of this configuration. A good example would be the site's name.
 
-his [article](https://www.drupal.org/node/2120523#s-simple-configuration-vs-configuration-entities), you can have a more deep analysis of this.\
-\
-Configuration entities is a type of configuration which you would empower a user to create and configure one or more times, in order to be used in some other configuration form, like image styles or views.
+The Configuration Entity API, however, is used to store multiple sets of configuration - for example node types, views, vocabularies, and fields.\
+&#x20;In this [article](https://www.drupal.org/node/2120523#s-simple-configuration-vs-configuration-entities), you can have a more deep analysis of these differences.\
+And if you want to [create a configuration entity type](https://www.drupal.org/node/1809494), check this page on drupal.org.\
+
 
 ### What is configuration for?
 
@@ -38,7 +39,7 @@ To export to sync directory, your changes into the DB:\
 
 To import configuration from sync directory, overriding your changes in the DB: Execute: docker-`docker-compose exec web ./vendor/bin/drush cim`
 
-### Configuration storage
+### How is configuration stored
 
 Configuration can be stored either in YAML files (the sync storage) or in the database (the active storage).
 
@@ -49,7 +50,7 @@ There are two ways this can be done:\
 
 You can also provide configuration files with the module  in a **config/optional** folder. In this case, these should only be imported if their dependencies are met. Meaning that if the dependencies of the configurations are not met (modules, themes and other configurations), the module will install correctly but without those configurations.
 
-### Updating Configuration
+### How is configuration updated
 
 If your module is making a [data model change related to configuration](https://www.drupal.org/node/2535316), then you need to properly update your data model. The four steps are:
 
@@ -60,25 +61,39 @@ If your module is making a [data model change related to configuration](https://
 
 ### Schema
 
-Schema allows various systems to interact properly with the configuration items. They are a way to define the configuration items and specify what kind of data they store (strings, Booleans, integers and so on).\
-The **schema** or structure for the image style configuration entity is defined in _core/modules/image/config/schema/image.schema.yml_.
+Schema allows various systems to interact properly with the configuration items. They are a way to define the configuration items and specify what kind of data they store (strings, Booleans, integers and so on). \
+The **schema** or structure for the image style configuration entity is defined in _core/modules/image/config/schema/image.schema.yml_.\
+\
+There are three main reasons why configuration needs a schema definition:\
+\- Multilingual support\
+\- Configuration entities\
+\- Typecasting
 
 More about configuration schema/metadata on this Drupal documentation [page](https://www.drupal.org/docs/drupal-apis/configuration-api/configuration-schemametadata).
 
-### Overrides
+### Configuration in code or database? Or?
 
-As
+The configuration is stored in the database, but to be organized and well described, it encoded in the YAML files. **These YAML files need to be imported, in order of its configuration to be used, because until then it's the database that holds the active configuration.**
+
+So, to make things more dynamic, the configuration API also provides an override system by which you can override the active configuration, at various levels. There are three layers at which these overrides can be used: global, module and language.
+
+**Global**\
+****The global override happens via the global $config variable. It's available in the settings.php file for site-wide overrides<mark style="color:red;">.</mark>\ <mark style="color:red;"></mark>\ <mark style="color:red;"></mark>**Module**\
+****With the modules override, we can create a service with the config.factory.override tag. \
+In this service we handle overrides. We can as well inject dependencies and make use of these to calculate the overrides.\
+If we set the priority to 5, we can control the order in which modules get the chance at overriding configuration. The higher priority, will take precedence over the lower one.\
+Clearing the cache will register this service and alter our configuration.\
+\
+**Language**\
+****If we enable configuration translation and add languages to our site, we can translate whatever configuration items that are described as translated by their schema. By doing this, we override the default configuration for a particular language. This override will be stored in the configuration storage and can be exported to YAML files.\
+****
 
 
-
-### Key concepts of the CMI (Configuration Management Initiative):  UUID
-
-When configuration changes are imported, the import files must match the site's UUID.\
-Because of this, new environments for a same site, need to be created as clones.
 
 **Sources**\
-Sipos, D. (2020). **Drupal 9 Module Development**: Get up and running with building powerful Drupal modules and applications (3rd Edition). Packt Publishing Ltd.\\
-
+Sipos, D. (2020). **Drupal 9 Module Development**: Get up and running with building powerful Drupal modules and applications (3rd Edition). Packt Publishing Ltd.\\\
 [What-are-configuration-entities](https://drupalize.me/tutorial/what-are-configuration-entitie)\
 [Simple ](https://www.drupal.org/node/2120523#s-simple-configuration-vs-configuration-entities)[configuration - vs - configuration-entities](https://www.drupal.org/node/2120523#s-simple-configuration-vs-configuration-entities)\
-[Updating-configuration-in-drupal-8](https://www.drupal.org/docs/drupal-apis/update-api/updating-configuration-in-drupal-8)
+[Updating-configuration-in-drupal-8](https://www.drupal.org/docs/drupal-apis/update-api/updating-configuration-in-drupal-8)\
+[Configuration override system](https://www.drupal.org/docs/drupal-apis/configuration-api/configuration-override-system)\
+[Create a configuration entity type ](https://www.drupal.org/node/1809494)
