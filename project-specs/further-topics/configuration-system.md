@@ -12,7 +12,16 @@ description: >-
 Configuration, in Drupal, is the data that the proper functioning of an application relies upon.\
 In versions prior to Drupal 8, data was simply stored in the database and the lack of consistency of Features or Ctools exportables meant big risks and headaches for Drupal developers.
 
-Since Drupal 8, the configuration system (CS) is, therefore, an indispensable tool.
+The [State API](https://api.drupal.org/api/drupal/core!core.api.php/group/state\_api) is a simple system for the storage of information about the system's state. The information is stored in the database and will be lost when the database is dropped or the site is re-installed from configuration. For storing data which needs to be edited by humans or needs to be shared between environments use the[ Configuration API](https://www.drupal.org/developing/api/8/configuration). In Drupal 7 and earlier the variables system was used to store state information.
+
+State information is stored in the database and has the following characteristics:
+
+* It is not meant to be exported.
+* It is specific to an individual environment.
+* It is not to be deployed to another environment.
+* All state information is lost when you reset the database.
+
+Since Drupal 8, the configuration API is, therefore, an indispensable tool.
 
 The configuration API comes in two flavors - the (simple) Config API and the Configuration Entity API. The key difference is that the Config API is the singleton use case. A singleton is where there can be only a single instance of this configuration. A good example would be the site's name.
 
@@ -80,15 +89,22 @@ So, to make things more dynamic, the configuration API also provides an override
 **Global**\
 ****The global override happens via the global $config variable. It's available in the settings.php file for site-wide overrides<mark style="color:red;">.</mark>\ <mark style="color:red;"></mark>\ <mark style="color:red;"></mark>**Module**\
 ****With the modules override, we can create a service with the config.factory.override tag. \
-In this service we handle overrides. We can as well inject dependencies and make use of these to calculate the overrides.\
-If we set the priority to 5, we can control the order in which modules get the chance at overriding configuration. The higher priority, will take precedence over the lower one.\
-Clearing the cache will register this service and alter our configuration.\
+In this service we, among other related things, handle overrides.\
 \
 **Language**\
 ****If we enable configuration translation and add languages to our site, we can translate whatever configuration items that are described as translated by their schema. By doing this, we override the default configuration for a particular language. This override will be stored in the configuration storage and can be exported to YAML files.\
 ****
 
+### State API
 
+The [State API](https://api.drupal.org/api/drupal/core!core.api.php/group/state\_api) is a simple system for the storage of information about the system's state. The information is stored in the database and will be lost when the database is dropped or the site is re-installed from configuration. For storing data which needs to be edited by humans or needs to be shared between environments use the[ Configuration API](https://www.drupal.org/developing/api/8/configuration). In Drupal 7 and earlier the variables system was used to store state information.
+
+State information is stored in the database and has the following characteristics:
+
+* It is not meant to be exported.
+* It is specific to an individual environment.
+* It is not to be deployed to another environment.
+* All state information is lost when you reset the database.
 
 **Sources**\
 Sipos, D. (2020). **Drupal 9 Module Development**: Get up and running with building powerful Drupal modules and applications (3rd Edition). Packt Publishing Ltd.\\\
