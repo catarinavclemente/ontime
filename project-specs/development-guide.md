@@ -105,8 +105,7 @@ docker-compose exec web composer install
 docker-compose exec web ./vendor/bin/run toolkit:build-dev
 ```
 
-If it's a fresh install:\
-docker-compose exec web ./vendor/bin/run toolkit:download-dump
+If it's a fresh install:
 
 ```
 docker-compose exec web ./vendor/bin/run toolkit:download-dump
