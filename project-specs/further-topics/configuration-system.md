@@ -9,14 +9,14 @@ description: >-
 
 ### What is configuration?
 
-\
-Configuration, in Drupal, is the data that the proper functioning of an application relies upon.
-
+Configuration, in Drupal, is the data that the proper functioning of an application relies upon.\
 In versions prior to Drupal 8, data was simply stored in the database and the lack of consistency of Features or Ctools exportables meant big risks and headaches for Drupal developers.
 
 Since Drupal 8, the configuration system (CS) is, therefore, an indispensable tool.
 
-There are two types of configuration: simple and configuration entities. In this [article](https://www.drupal.org/node/2120523#s-simple-configuration-vs-configuration-entities), you can have a more deep analysis of this.\
+There are two types of configuration: simple and configuration entities. In tbetterWorld21
+
+his [article](https://www.drupal.org/node/2120523#s-simple-configuration-vs-configuration-entities), you can have a more deep analysis of this.\
 \
 Configuration entities is a type of configuration which you would empower a user to create and configure one or more times, in order to be used in some other configuration form, like image styles or views.
 
@@ -44,21 +44,34 @@ Configuration can be stored either in YAML files (the sync storage) or in the da
 
 If a configuration is mandatory for our code to work, we can create it upon module installation.\
 There are two ways this can be done:\
-**Statically (most common way):** including YAML files in a config/install folder of the module, so that they get imported when the module is installed.\
+**Statically (most common way):** including YAML files in a **config/install** folder of the module, so that they get imported when the module is installed.\
 **Dynamically (if the values we need to set in the configuration must be retrieved dynamically):** implementing a hook\_install(), so that we can try to get our value and create the configuration object containing it.
 
-However, with optional configuration, you can provide configuration files with the module that should only be imported if their dependencies are met. Meaning that if the dependencies of these configurations are not met (modules, themes and other configurations), the module will install correctly but without those configurations.
+You can also provide configuration files with the module  in a **config/optional** folder. In this case, these should only be imported if their dependencies are met. Meaning that if the dependencies of the configurations are not met (modules, themes and other configurations), the module will install correctly but without those configurations.
 
-****
+### Updating Configuration
+
+If your module is making a [data model change related to configuration](https://www.drupal.org/node/2535316), then you need to properly update your data model. The four steps are:
+
+1. Update your configuration schema YML file so that it reflects your new data model. This will make sure that people who install your module after you made the change will get the correct schema. See the [Configuration Schema documentation](https://www.drupal.org/node/1905070) for details on that.
+2. Make sure any configuration items provided by your module in the config/install and config/optional directories have been updated, so that people installing your module will get correct configuration.
+3. Write a hook\_update\_N() function. This will update configuration items for existing users of your module who already had it installed before you made the change so that they can continue to function. This is described below.
+4. Write tests to ensure the code in your hook\_update\_N() correctly modifies the configuration. This will make sure that people who have an older version of your module installed can successfully update to the newer version. See [https://www.drupal.org/docs/8/api/update-api/writing-automated-update-tests-for-drupal-8](https://www.drupal.org/docs/8/api/update-api/writing-automated-update-tests-for-drupal-8) for details.
 
 ### Schema
 
 Schema allows various systems to interact properly with the configuration items. They are a way to define the configuration items and specify what kind of data they store (strings, Booleans, integers and so on).\
 The **schema** or structure for the image style configuration entity is defined in _core/modules/image/config/schema/image.schema.yml_.
 
-Key concepts of the CMI (Configuration Management Initiative):\
-\
-UUID
+More about configuration schema/metadata on this Drupal documentation [page](https://www.drupal.org/docs/drupal-apis/configuration-api/configuration-schemametadata).
+
+### Overrides
+
+As
+
+
+
+### Key concepts of the CMI (Configuration Management Initiative):  UUID
 
 When configuration changes are imported, the import files must match the site's UUID.\
 Because of this, new environments for a same site, need to be created as clones.
@@ -66,6 +79,6 @@ Because of this, new environments for a same site, need to be created as clones.
 **Sources**\
 Sipos, D. (2020). **Drupal 9 Module Development**: Get up and running with building powerful Drupal modules and applications (3rd Edition). Packt Publishing Ltd.\\
 
-[https://drupalize.me/tutorial/what-are-configuration-entitie](https://drupalize.me/tutorial/what-are-configuration-entitie)
-
-[https://www.drupal.org/node/2120523#s-simple-configuration-vs-configuration-entities](https://www.drupal.org/node/2120523#s-simple-configuration-vs-configuration-entities)
+[What-are-configuration-entities](https://drupalize.me/tutorial/what-are-configuration-entitie)\
+[Simple ](https://www.drupal.org/node/2120523#s-simple-configuration-vs-configuration-entities)[configuration - vs - configuration-entities](https://www.drupal.org/node/2120523#s-simple-configuration-vs-configuration-entities)\
+[Updating-configuration-in-drupal-8](https://www.drupal.org/docs/drupal-apis/update-api/updating-configuration-in-drupal-8)
