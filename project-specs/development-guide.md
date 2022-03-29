@@ -77,8 +77,6 @@ To install locally a project running Toolkit 4 you should run the following comm
 Start by cloning GIT reference repo:\
 `git clone git@github.com:ec-europa/<repository-name>.git`
 
-#### Configuring the project
-
 #### Setting up the environment
 
 By default, docker-compose reads two files, a `docker-compose.yml` and an optional `docker-compose.override.yml` file. **By convention, the `docker-compose.yml` contains your base configuration and it is committed to the repository.** This file contains a webserver, a mysql server and a selenium server. It very closely matches the environment the website is deployed on.
