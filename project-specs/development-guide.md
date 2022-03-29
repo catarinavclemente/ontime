@@ -52,32 +52,24 @@ $ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docke
 Apply executable permissions to the binary:
 
 ```
-$ sudo chmod +x /usr/local/bin/docker-compose
-```
-
-If the command `docker-compose` fails after installation, check your path. You can also create a symbolic link to `/usr/bin` or any other directory in your path.
-
-```
+If the command docker-compose fails after installation, check your path. You can also create a symbolic link to /usr/bin or any other directory in your path.
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+$ sudo chmod +x /usr/local/bin/docker-compose
+
 ```
 
 **Using Docker Compose**
 
 To run the containerised environment, you can follow these steps to set it up, using Docker Compose.
 
-Run:
+Run: `docker-compose up -d`
 
-```
-docker-compose up -d
-```
+This will set up and run the environment. After spawning, please follow the set of commands specified in the documentation of a given component, site or a project. Usually the next step is to execute Composer script to download and set up dependencies.\
+`docker-compose exec web ./vendor/bin/run drupal:site-install`
 
-This will set up and run the environment. After spawning, please follow the set of commands specified in the documentation of a given component, site or a project. Usually the next step is to execute Composer script to download and set up dependencies.
-
-```
-docker-compose exec web ./vendor/bin/run drupal:site-install
-docker-compose exec web composer install
-```
-
+Wait a few minutes and, finally, run:\
+`docker-compose exec web composer install`\
+\
 In order to tweak settings or adjust configuration of a specific container, please edit the `docker-compose.yml` file accordingly to your current needs.
 
 ### Setting up a project

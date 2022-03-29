@@ -9,4 +9,5 @@
 * [Development guide](project-specs/development-guide.md)
 * [Further topics](project-specs/further-topics/README.md)
   * [Configuration system](project-specs/further-topics/configuration-system.md)
+  * [Content management strategies](project-specs/further-topics/content-management-strategies.md)
 * [ATLAS CMS](project-specs/atlas-cms.md)
