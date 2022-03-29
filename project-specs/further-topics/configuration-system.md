@@ -96,6 +96,8 @@ In this service we, among other related things, handle overrides.\
 
 We have three layers for configuration overrides by this exact order of priority: global, modules, and languages. Global overrides take precedence over everything else, while module overrides take precedence over language ones. This is why if we override a system configuration in a module, we cannot use language override in our code. So, this is important to keep in mind.
 
+\
+\
 **Sources**\
 Sipos, D. (2020). **Drupal 9 Module Development**: Get up and running with building powerful Drupal modules and applications (3rd Edition). Packt Publishing Ltd.\\\
 [What-are-configuration-entities](https://drupalize.me/tutorial/what-are-configuration-entitie)\
