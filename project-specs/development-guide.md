@@ -185,3 +185,7 @@ Starts the containers in the background and leaves them running.\
 Check the state of the working directory and the staging area\
 Check configurations status:\
 `./vendor/bin/drush config:status`\\
+
+### Bash
+
+\~/.bashrc.d
