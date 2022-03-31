@@ -90,8 +90,7 @@ Then, build your development instance of the website, running:\
 If it's a fresh install:\
 `docker-compose exec web ./vendor/bin/run toolkit:download-dump`
 
-Then, perform a clone installation with production data:
-
+Then, perform a clone installation with production data:\
 `docker-compose exec web ./vendor/bin/run toolkit:install-clone`
 
 ### Git configuration
