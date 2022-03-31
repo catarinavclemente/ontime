@@ -189,3 +189,10 @@ Check configurations status:\
 ### Bash
 
 \~/.bashrc.d
+
+
+
+### Vim
+
+:w ! sudo tee %\
+para forçar a escrita num arquivo sem permissão de escrita.
