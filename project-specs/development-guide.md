@@ -62,20 +62,17 @@ To run the containerised environment, you can follow these steps to set it up, u
 
 Run: `docker-compose up -d`
 
-This will set up and run the environment. After spawning, please follow the set of commands specified in the documentation of a given component, site or a project. Usually the next step is to execute Composer script to download and set up dependencies.\
-`docker-compose exec web ./vendor/bin/run drupal:site-install`
-
-Wait a few minutes and, finally, run:\
-`docker-compose exec web composer install`\
-\
-In order to tweak settings or adjust configuration of a specific container, please edit the `docker-compose.yml` file accordingly to your current needs.
+This will set up and run the environment. After spawning, please follow the set of commands specified in the documentation of a given component, site or a project.&#x20;
 
 ### Setting up a project
 
-To install locally a project running Toolkit 4 you should run the following commands:
+To install the project you should run the following commands:
 
 Start by cloning GIT reference repo:\
-`git clone git@github.com:ec-europa/<repository-name>.git`
+`git clone git@github.com:ec-europa/<repository-name>.git`\
+``\
+``Usually the next step is to execute Composer script to download and set up dependencies.\
+`docker-compose exec web ./vendor/bin/run drupal:site-install`
 
 #### Setting up the environment
 
@@ -83,25 +80,17 @@ By default, docker-compose reads two files, a `docker-compose.yml` and an option
 
 **Create a docker-compose.override** file to add settings for existent services (ASDA credentials for web service) or to add entirely new services. **This file is never committed to the repository.**
 
-Check if composer.json has the correct requirements.\
-And then:
+\
+Check if `composer.json` has the correct requirements and run composer install in the web service:\
+`docker-compose exec web composer install`\
+\
+Then, build your development instance of the website, running:\
+`docker-compose exec web ./vendor/bin/run toolkit:build-dev`
 
-```
-docker-compose exec web composer install
-docker-compose exec web ./vendor/bin/run toolkit:build-dev
-```
+If it's a fresh install:\
+`docker-compose exec web ./vendor/bin/run toolkit:download-dump`
 
-If it's a fresh install:
-
-```
-docker-compose exec web ./vendor/bin/run toolkit:download-dump
-```
-
-Then:
-
-```
-docker-compose exec web ./vendor/bin/run toolkit:install-clone
-```
+Then, perform a clone installation with production data:
 
 `docker-compose exec web ./vendor/bin/run toolkit:install-clone`
 
