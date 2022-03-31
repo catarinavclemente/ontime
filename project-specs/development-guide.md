@@ -103,10 +103,7 @@ Then:
 docker-compose exec web ./vendor/bin/run toolkit:install-clone
 ```
 
-\``docker-compose exec web ./vendor/bin/run toolkit:install-clone`
-
-```
-```
+`docker-compose exec web ./vendor/bin/run toolkit:install-clone`
 
 ### Git configuration
 
