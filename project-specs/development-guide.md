@@ -74,9 +74,7 @@ Start by cloning GIT reference repo:\
 ``Usually the next step is to execute Composer script to download and set up dependencies.\
 `docker-compose exec web ./vendor/bin/run drupal:site-install`
 
-#### Setting up the environment
-
-By default, docker-compose reads two files, a `docker-compose.yml` and an optional `docker-compose.override.yml` file. **By convention, the `docker-compose.yml` contains your base configuration and it is committed to the repository.** This file contains a webserver, a mysql server and a selenium server. It very closely matches the environment the website is deployed on.
+By default, docker-compose reads two files, a `docker-compose.yml` and an optional `docker-compose.override.yml` file. By convention, the `docker-compose.yml` contains your base configuration and it is committed to the repository. This file contains a webserver, a mysql server and a selenium server. It very closely matches the environment the website is deployed on.
 
 **Create a docker-compose.override** file to add settings for existent services (ASDA credentials for web service) or to add entirely new services. **This file is never committed to the repository.**
 
