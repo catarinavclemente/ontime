@@ -37,7 +37,7 @@ You need to have the following software installed on your local development envi
 
 #### Configure Docker profile <a href="#id-4.configurec9-dockerprofile" id="id-4.configurec9-dockerprofile"></a>
 
-\`\`\`sudo salt-call state.apply profiles.docker
+`sudo salt-call state.apply profiles.docker`
 
 This [page](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/AWS+Cloud9+-+Docker) explains how to use docker for running web server and all needed services for website development.
 
@@ -46,16 +46,13 @@ This [page](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/AWS+Cloud
 ```
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('sha384', 'composer-setup.php') === '906a84df04cea2aa72f40b5f787e49f22d4c2f19492ac310e8cba5b96ac8b64115ac402c8cd292b8a03482574915d1a8') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php --version=1.9.0
+php composer-setup.php
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
 Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)
 
-#### Docker Compose
 
-Run this command to download the current stable release of Docker Compose: \
-&#x20;`$ sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/`
 
 Apply executable permissions to the binary:\
 `$ sudo chmod +x /usr/local/bin/docker-compose`
@@ -77,7 +74,14 @@ This will set up and run the environment. After spawning, please follow the set 
 
 ### Setting up a project
 
-To install the project you should run the following commands:
+To install the project you should run the commands, bellow.\
+\
+New project from scratch
+
+To instantiate a new project to running as a subsite you only have to execute one command which will perform multiple steps for you automatically.\
+\`\`\`composer create-project ec-europa/subsite --stability=dev --reference
+
+
 
 Start by cloning GIT reference repo:\
 `git clone git@github.com:ec-europa/<repository-name>.git`\
