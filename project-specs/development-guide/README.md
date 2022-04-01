@@ -31,18 +31,17 @@ You need to have the following software installed on your local development envi
 {% endhint %}
 
 \
+/home/ec2-user\
+. .aws .bash\_logout .bashrc **environment** .gitconfig .mkshrc .npm .nvm package-lock.json .rvm .zlogin .. .bash\_history .bash\_profile .c9 .gem .gnupg node\_modules .npmrc package.json .profile .ssh .zshrc\
 
-
-\
-environment node\_modules package.json package-lock.json
-
-### Git, Docker and Docker Compose <a href="#id-4.configurec9-dockerprofile" id="id-4.configurec9-dockerprofile"></a>
 
 #### Configure Docker profile <a href="#id-4.configurec9-dockerprofile" id="id-4.configurec9-dockerprofile"></a>
 
-sudo salt-call state.apply profiles.docker
+\`\`\`sudo salt-call state.apply profiles.docker
 
 This [page](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/AWS+Cloud9+-+Docker) explains how to use docker for running web server and all needed services for website development.
+
+#### &#x20;Install and setup composer <a href="#id-4.configurec9-dockerprofile" id="id-4.configurec9-dockerprofile"></a>
 
 ```
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
