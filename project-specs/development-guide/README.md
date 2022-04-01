@@ -17,6 +17,10 @@ Create your Cloud 9 instance:
 * Platform must be "Amazon Linux 2"
 * Be careful, "m4.medium" is listed, but not available, for "medium" instance type you have to select "Other instance type"
 
+#### Set-up SSH from your EC2 instance
+
+[https://medium.com/sonabstudios/setting-up-github-on-aws-cloud9-with-ssh-2545c4f989ea](https://medium.com/sonabstudios/setting-up-github-on-aws-cloud9-with-ssh-2545c4f989ea)
+
 #### Initialize
 
 After creating the environment, it is compulsory to initialise it with the script provided by DevOps:\
@@ -26,10 +30,7 @@ After creating the environment, it is compulsory to initialise it with the scrip
 You need to have the following software installed on your local development environment: [Docker](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
 {% endhint %}
 
-ssh-keygen -t rsa \
-This command will generate your public/private rsa key pair. Which you may save, for instance,  in '/home/ec2-user/.ssh/id\_rsa'
-
-Initial structure in your new instance:\
+\
 
 
 \
