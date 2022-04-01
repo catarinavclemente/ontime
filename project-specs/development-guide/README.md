@@ -23,8 +23,17 @@ After creating the environment, it is compulsory to initialise it with the scrip
 `aws s3 cp s3://c9-install-scripts/install-salt.sh - | bash`
 
 {% hint style="info" %}
-You need to have the following software installed on your local development environment: [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), [Docker](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
+You need to have the following software installed on your local development environment: [Docker](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
 {% endhint %}
+
+ssh-keygen -t rsa \
+This command will generate your public/private rsa key pair. Which you may save, for instance,  in '/home/ec2-user/.ssh/id\_rsa'
+
+Initial structure in your new instance:\
+
+
+\
+environment node\_modules package.json package-lock.json
 
 ### Git, Docker and Docker Compose <a href="#id-4.configurec9-dockerprofile" id="id-4.configurec9-dockerprofile"></a>
 
@@ -150,7 +159,7 @@ Sources: [https://www.atlassian.com/continuous-delivery/continuous-integration/t
 
 If we don't want to use the auto-merge we can proceed as the usual way, so **from our fork 's \<branch\_name> against reference's master branch.**
 
-![](../.gitbook/assets/image2020-8-13\_15-57-34.png)
+![](../../.gitbook/assets/image2020-8-13\_15-57-34.png)
 
 **PS:** Once the pipeline have green lines, we need to **contact QA Team and request a code review** before lead ACC. If we pass this code review QA directly merge our PR into master and a new drone execution will be triggered to deploy in ACC.
 
@@ -158,7 +167,7 @@ If we don't want to use the auto-merge we can proceed as the usual way, so **fro
 
 We can use this functionality naming our fork's branch **"deploy",** so in order to trigger a new drone we need to open a **new PR from our fork's deploy branch against reference's master branch** as following:
 
-![](../.gitbook/assets/image2020-8-13\_15-37-0.png)
+![](../../.gitbook/assets/image2020-8-13\_15-37-0.png)
 
 Keep in mind that you can go straight to ACC but a QA review will be needed before lead PROD (unless you are hosted in a dedicated server, then deploy into PROD is under your own risk).
 
@@ -174,21 +183,7 @@ Check the state of the working directory and the staging area\
 Check configurations status:\
 `./vendor/bin/drush config:status`\\
 
-### Bash
-
-`.bashrc` is a Bash [shell script](http://en.wikipedia.org/wiki/Shell\_script) that Bash runs whenever it is started interactively. It initializes an interactive shell session. You can put any command in that file that you could type at the command prompt.
-
-If you put commands here, you set up the shell for use in your particular environment, or to customize things to your preferences. A common thing to put in `.bashrc` are [aliases](http://en.wikipedia.org/wiki/Alias\_\(command\)) that you want to always be available.\
-\
-In the directory bellow, you'll find the devops alias file ()\
-\~/.bashrc.d/00-devops.aliases.sh\
-\
-And you can create/edit your own bash aliases file(s).\
-\~/.bashrc.d/00-\[your-user].aliases.sh\
-\
-[https://www.si.edu/tbma/resource/method-maintaining-bashrc-file-across-multiple-workstations-using-homebrew-and-github](https://www.si.edu/tbma/resource/method-maintaining-bashrc-file-across-multiple-workstations-using-homebrew-and-github)
-
-
+###
 
 ### Vim
 

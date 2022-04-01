@@ -6,7 +6,9 @@
 
 * [Design system](project-specs/design-system.md)
 * [Project settings](project-specs/project-settings.md)
-* [Development guide](project-specs/development-guide.md)
+* [Development guide](project-specs/development-guide/README.md)
+  * [Bash](project-specs/development-guide/bash.md)
+* [Cloud9 server](project-specs/cloud9-server.md)
 * [Further topics](project-specs/further-topics/README.md)
   * [Configuration system](project-specs/further-topics/configuration-system.md)
   * [Content management strategies](project-specs/further-topics/content-management-strategies.md)
