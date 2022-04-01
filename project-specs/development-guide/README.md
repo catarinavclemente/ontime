@@ -77,15 +77,12 @@ This will set up and run the environment. After spawning, please follow the set 
 
 To install the project you should run the commands, bellow.\
 \
-New project from scratch
-
-To instantiate a new project to running as a subsite you only have to execute one command which will perform multiple steps for you automatically.\
-`composer create-project ec-europa/subsite --stability=dev --reference`
+New project from scratch`????`
 
 Start by cloning GIT reference repo:\
 `git clone git@github.com:ec-europa/<repository-name>.git`\
-``\
-``Usually the next step is to execute Composer script to download and set up dependencies.\
+\
+Usually the next step is to execute Composer script to download and set up dependencies.\
 `docker-compose exec web ./vendor/bin/run drupal:site-install`
 
 By default, docker-compose reads two files, a `docker-compose.yml` and an optional `docker-compose.override.yml` file. By convention, the `docker-compose.yml` contains your base configuration and it is committed to the repository. This file contains a webserver, a mysql server and a selenium server. It very closely matches the environment the website is deployed on.
