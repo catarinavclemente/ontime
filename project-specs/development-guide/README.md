@@ -118,6 +118,10 @@ Finally, Git looks for configuration values in the configuration file in the Git
 
 Each of these “levels” (system, global, local) overwrites values in the previous level, so values in `.git/config` trump those in `[path]/etc/gitconfig`, for instance.\\
 
+
+
+[https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration](https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
+
 ## Collaborating
 
 On GitHub, create a fork from the EC repo.\
