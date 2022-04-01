@@ -79,9 +79,7 @@ To install the project you should run the commands, bellow.\
 New project from scratch
 
 To instantiate a new project to running as a subsite you only have to execute one command which will perform multiple steps for you automatically.\
-\`\`\`composer create-project ec-europa/subsite --stability=dev --reference
-
-
+`composer create-project ec-europa/subsite --stability=dev --reference`
 
 Start by cloning GIT reference repo:\
 `git clone git@github.com:ec-europa/<repository-name>.git`\
