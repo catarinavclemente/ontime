@@ -73,23 +73,18 @@ Run: `docker-compose up -d`
 
 This will set up and run the environment. After spawning, please follow the set of commands specified in the documentation of a given component, site or a project.&#x20;
 
-### Setting up a project
+### Project installation and set-up
 
 To install the project you should run the commands, bellow.\
-\
+[https://github.com/ec-europa/toolkit/blob/ce6278216dc58e7324f51c83c0a423ab52edb6f3/docs/installing-project.md](https://github.com/ec-europa/toolkit/blob/ce6278216dc58e7324f51c83c0a423ab52edb6f3/docs/installing-project.md)\
 New project from scratch`????`
 
 Start by cloning GIT reference repo:\
 `git clone git@github.com:ec-europa/<repository-name>.git`
 
-\
-Check if `composer.json` has the correct requirements and run composer install in the web service:\
-`docker-compose exec web composer install`\
-\
-Then, build your development instance of the website, running:\
-`docker-compose exec web ./vendor/bin/run toolkit:build-dev`\
-``\
-``By default, docker-compose reads two files, a `docker-compose.yml` and an optional `docker-compose.override.yml` file. By convention, the `docker-compose.yml` contains your base configuration and it is committed to the repository. This file contains a webserver, a mysql server and a selenium server. It very closely matches the environment the website is deployed on.
+By default, docker-compose reads two files, a `docker-compose.yml` and an optional `docker-compose.override.yml` file. By convention, the `docker-compose.yml` contains your base configuration and it is committed to the repository. This file contains a webserver, a mysql server and a selenium server. It very closely matches the environment the website is deployed on.
+
+**Create a docker-compose.override** file to add settings for existent services (ASDA credentials for web service) or to add entirely new services. **This file is never committed to the repository.**
 
 **Create a docker-compose.override** file to add settings for existent services (ASDA credentials for web service) or to add entirely new services. **This file is never committed to the repository.**
 
