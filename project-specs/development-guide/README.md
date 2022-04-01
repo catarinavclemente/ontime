@@ -50,6 +50,8 @@ php composer-setup.php --version=1.9.0
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
+Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)
+
 #### Docker Compose
 
 Run this command to download the current stable release of Docker Compose: \
@@ -182,8 +184,6 @@ Starts the containers in the background and leaves them running.\
 Check the state of the working directory and the staging area\
 Check configurations status:\
 `./vendor/bin/drush config:status`\\
-
-###
 
 ### Vim
 
