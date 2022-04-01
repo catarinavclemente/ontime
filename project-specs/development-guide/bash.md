@@ -12,4 +12,6 @@ And you can create/edit your own bash aliases file(s).\
 \
 [https://www.si.edu/tbma/resource/method-maintaining-bashrc-file-across-multiple-workstations-using-homebrew-and-github](https://www.si.edu/tbma/resource/method-maintaining-bashrc-file-across-multiple-workstations-using-homebrew-and-github)
 
-[https://oit.ua.edu/wp-content/uploads/2020/12/Linux\_bash\_cheat\_sheet-1.pdf](https://oit.ua.edu/wp-content/uploads/2020/12/Linux\_bash\_cheat\_sheet-1.pdf)
+[https://oit.ua.edu/wp-content/uploads/2020/12/Linux\_bash\_cheat\_sheet-1.pdf](https://oit.ua.edu/wp-content/uploads/2020/12/Linux\_bash\_cheat\_sheet-1.pdf)\
+\
+[https://linuxhandbook.com/grep-command-examples/](https://linuxhandbook.com/grep-command-examples/)
