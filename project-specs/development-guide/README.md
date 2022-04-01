@@ -50,19 +50,20 @@ php composer-setup.php
 sudo mv composer.phar /usr/local/bin/composer
 ```
 
-Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)
+Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)\
 
 
+#### Docker-compose
 
-Apply executable permissions to the binary:\
-`$ sudo chmod +x /usr/local/bin/docker-compose`
+Copy the docker-compose.yml provided by devops in your project
+
+The docker-compose.yml will replicate the services versions available on production.
+
+All images available are listed here [https://docs.fpfis.eu/docker-images/](https://docs.fpfis.eu/docker-images/)
+
+`docker pull fpfis/httpd-php-dev:[php version]`
 
 If the command docker-compose fails after installation, check your path. You can also create a symbolic link to /usr/bin or any other directory in your path.
-
-```
-sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
-$ sudo chmod +x /usr/local/bin/docker-compose
-```
 
 **Using Docker Compose**
 
