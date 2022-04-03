@@ -64,6 +64,16 @@ sudo mv composer.phar /usr/local/bin/composer
 Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)\
 
 
+### Configure C9 <a href="#title-text" id="title-text"></a>
+
+2 profiles are available: [Lamp Profile](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/4.+Configure+C9#id-4.ConfigureC9-LampProfile) and [Docker profile](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/4.+Configure+C9#id-4.ConfigureC9-Dockerprofile).\
+\
+**Docker profile installation**\
+****`sudo salt-call state.apply profiles.docker`
+
+**Specific version**\
+****`sudo` `salt-call state.apply profiles.docker pillar='{"docker":{"php_version":"7.4"}}`
+
 #### Docker-compose
 
 Copy the docker-compose.yml provided by devops in your project
