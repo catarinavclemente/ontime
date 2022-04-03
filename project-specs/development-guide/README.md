@@ -41,6 +41,17 @@ You need to have the following software installed on your local development envi
 
 This [page](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/AWS+Cloud9+-+Docker) explains how to use docker for running web server and all needed services for website development.
 
+Source: [https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/AWS+Cloud9](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/AWS+Cloud9)
+
+### Checking your version of npm and Node.js <a href="#checking-your-version-of-npm-and-nodejs" id="checking-your-version-of-npm-and-nodejs"></a>
+
+To see if you already have Node.js and npm installed and check the installed version, run the following commands:
+
+```
+node -v
+npm -v
+```
+
 #### &#x20;Install and setup composer <a href="#id-4.configurec9-dockerprofile" id="id-4.configurec9-dockerprofile"></a>
 
 ```
