@@ -77,9 +77,13 @@ Start by cloning GIT reference repo:\
 Connect to container using [docker-compose exec](https://docs.docker.com/compose/reference/exec/):\
 `$ docker-compose exec web bash`
 
-## ``[`https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/AWS+Cloud9+-+Docker`](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/AWS+Cloud9+-+Docker)``
+Run usual commands:
 
-By default, docker-compose reads two files, a `docker-compose.yml` and an optional `docker-compose.override.yml` file. By convention, the `docker-compose.yml` contains your base configuration and it is committed to the repository. This file contains a webserver, a mysql server and a selenium server. It very closely matches the environment the website is deployed on.
+```
+$ [root@ip-172-XX-XX-XX MYWEBSITE]# composer install
+$ [root@ip-172-XX-XX-XX MYWEBSITE]# ./vendor/bin/run toolkit:build-dev
+$ [root@ip-172-XX-XX-XX MYWEBSITE]# ./vendor/bin/run toolkit:install-clean
+```
 
 **Using Docker Compose**
 
