@@ -1,12 +1,6 @@
-# Development guide
+# Environment
 
-## Environment
-
-{% hint style="info" %}
-**Good to know:** Before following the instructions provided on toolkit, be sure to have composer installed in your environment
-{% endhint %}
-
-### C9 environment
+### C9
 
 Request a new Cloud 9 instance (at this moment you should email Giancarlo Di NATALE)\
 \
@@ -63,29 +57,24 @@ Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)\
 
 `sudo` `salt-call state.apply profiles.docker pillar='{"docker":{"php_version":"7.4"}}`
 
-### Project installation and set-up
-
-#### Git usage
+### Git usage
 
 **Security**\
-[Generate an hardware security key to authenticate to GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)\
-\
-**Configuration**\
+****\
+****[Generate an hardware security key to authenticate to GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)\
+[Adding a new SSH key to your GitHub account\
+](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)\
+<mark style="color:yellow;">**Configuration**</mark>\ <mark style="color:yellow;"></mark>_<mark style="color:yellow;">First, a quick review: Git uses a series of configuration files to determine non-default behavior that you may want. The first place Git looks for these values is in the system-wide</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`[path]/etc/gitconfig`</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">file, which contains settings that are applied to every user on the system and all of their repositories. If you pass the option</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`--system`</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">to</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`git config`</mark><mark style="color:yellow;">, it reads and writes from this file specifically.</mark>_
 
+_<mark style="color:yellow;">The next place Git looks is the</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`~/.gitconfig`</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">(or</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`~/.config/git/config`</mark><mark style="color:yellow;">) file, which is specific to each user. You can make Git read and write to this file by passing the</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`--global`</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">option.</mark>_ <mark style="color:yellow;"></mark><mark style="color:yellow;">Aliases are stored in \~/.gitconfig.</mark>
 
-_First, a quick review: Git uses a series of configuration files to determine non-default behavior that you may want. The first place Git looks for these values is in the system-wide `[path]/etc/gitconfig` file, which contains settings that are applied to every user on the system and all of their repositories. If you pass the option `--system` to `git config`, it reads and writes from this file specifically._
+_<mark style="color:yellow;">Finally, Git looks for configuration values in the configuration file in the Git directory (</mark><mark style="color:yellow;">`.git/config`</mark><mark style="color:yellow;">) of whatever repository you’re currently using. These values are specific to that single repository, and represent passing the</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`--local`</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">option to</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`git config`</mark><mark style="color:yellow;">. If you don’t specify which level you want to work with, this is the default.</mark>_
 
-_The next place Git looks is the `~/.gitconfig` (or `~/.config/git/config`) file, which is specific to each user. You can make Git read and write to this file by passing the `--global` option._ Aliases are stored in \~/.gitconfig.
+_<mark style="color:yellow;">Each of these “levels” (system, global, local) overwrites values in the previous level, so values in</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`.git/config`</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">trump those in</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`[path]/etc/gitconfig`</mark><mark style="color:yellow;">, for instance.\\</mark>_
 
-_Finally, Git looks for configuration values in the configuration file in the Git directory (`.git/config`) of whatever repository you’re currently using. These values are specific to that single repository, and represent passing the `--local` option to `git config`. If you don’t specify which level you want to work with, this is the default._
+<mark style="color:yellow;">Source:</mark> [<mark style="color:yellow;">https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration</mark>](https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)<mark style="color:yellow;"></mark>
 
-_Each of these “levels” (system, global, local) overwrites values in the previous level, so values in `.git/config` trump those in `[path]/etc/gitconfig`, for instance.\\_
-
-Source: [https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration](https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
-
-To install the project you should run the commands, bellow.\
-[https://github.com/ec-europa/toolkit/blob/ce6278216dc58e7324f51c83c0a423ab52edb6f3/docs/installing-project.md](https://github.com/ec-europa/toolkit/blob/ce6278216dc58e7324f51c83c0a423ab52edb6f3/docs/installing-project.md)\
-New project from scratch`????`
+### Project configuration
 
 Start by cloning GIT reference repo:\
 `git clone git@github.com:ec-europa/<repository-name>.git`
