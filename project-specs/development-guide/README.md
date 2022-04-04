@@ -26,13 +26,9 @@ After creating the environment, it is compulsory to initialise it with the scrip
 `aws s3 cp s3://c9-install-scripts/install-salt.sh - | bash`
 
 {% hint style="info" %}
-You need to have the following software installed on your local development environment: [Docker](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
+You need to have the following software installed on your local development environment: [Docker](https://docs.docker.com/install/) and [Docker Compose](https://docs.docker.com/compose/install/)\
+
 {% endhint %}
-
-\
-/home/ec2-user\
-. .aws .bash\_logout .bashrc **environment** .gitconfig .mkshrc .npm .nvm package-lock.json .rvm .zlogin .. .bash\_history .bash\_profile .c9 .gem .gnupg node\_modules .npmrc package.json .profile .ssh .zshrc\
-
 
 #### Configure Docker profile <a href="#id-4.configurec9-dockerprofile" id="id-4.configurec9-dockerprofile"></a>
 
@@ -42,7 +38,7 @@ This [page](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/AWS+Cloud
 
 Source: [https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/AWS+Cloud9](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/AWS+Cloud9)
 
-### Checking your version of npm and Node.js <a href="#checking-your-version-of-npm-and-nodejs" id="checking-your-version-of-npm-and-nodejs"></a>
+**Checking your version of npm and Node.js**
 
 To see if you already have Node.js and npm installed and check the installed version, run the following commands:
 
@@ -61,29 +57,11 @@ sudo mv composer.phar /usr/local/bin/composer
 ```
 
 Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)\
-[https://getcomposer.org/doc/faqs/how-to-install-untrusted-packages-safely.md](https://getcomposer.org/doc/faqs/how-to-install-untrusted-packages-safely.md)\
-\
+[https://getcomposer.org/doc/faqs/how-to-install-untrusted-packages-safely.md](https://getcomposer.org/doc/faqs/how-to-install-untrusted-packages-safely.md)
 
+#### [Docker profile](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/4.+Configure+C9#id-4.ConfigureC9-Dockerprofile) **installation specific php version 7.4**  <a href="#id-4.configurec9-2profilesareavailable" id="id-4.configurec9-2profilesareavailable"></a>
 
-### Configure C9 <a href="#title-text" id="title-text"></a>
-
-#### [Docker profile](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/4.+Configure+C9#id-4.ConfigureC9-Dockerprofile) <a href="#id-4.configurec9-2profilesareavailable" id="id-4.configurec9-2profilesareavailable"></a>
-
-****\
-**Docker profile installation specific php version 7.4** \
-****`sudo` `salt-call state.apply profiles.docker pillar='{"docker":{"php_version":"7.4"}}`
-
-#### Docker-compose
-
-Copy the docker-compose.yml provided by devops in your project
-
-The docker-compose.yml will replicate the services versions available on production.
-
-All images available are listed here [https://docs.fpfis.eu/docker-images/](https://docs.fpfis.eu/docker-images/)
-
-`docker pull fpfis/httpd-php-dev:[php version]`
-
-If the command docker-compose fails after installation, check your path. You can also create a symbolic link to /usr/bin or any other directory in your path.
+`sudo` `salt-call state.apply profiles.docker pillar='{"docker":{"php_version":"7.4"}}`
 
 **Using Docker Compose**
 
