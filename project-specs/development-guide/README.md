@@ -6,9 +6,10 @@
 **Good to know:** Before following the instructions provided on toolkit, be sure to have composer installed in your environment
 {% endhint %}
 
-### AWS Cloud 9
+### C9 environment
 
 Request a new Cloud 9 instance (at this moment you should email Giancarlo Di NATALE)\
+\
 Create your Cloud 9 instance:
 
 * Name your environment with your IAM username.
@@ -16,6 +17,8 @@ Create your Cloud 9 instance:
 * Your environment must be created in "eu-west-1" region (Ireland)
 * Platform must be "Amazon Linux 2"
 * Be careful, "m4.medium" is listed, but not available, for "medium" instance type you have to select "Other instance type"
+
+Source: [https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/2.+Create+my+C9+environment](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/2.+Create+my+C9+environment)
 
 #### Set-up SSH from your EC2 instance
 
