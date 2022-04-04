@@ -63,15 +63,25 @@ Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)\
 
 `sudo` `salt-call state.apply profiles.docker pillar='{"docker":{"php_version":"7.4"}}`
 
-**Using Docker Compose**
-
-To run the containerised environment, you can follow these steps to set it up, using Docker Compose.
-
-Run: `docker-compose up -d`
-
-This will set up and run the environment. After spawning, please follow the set of commands specified in the documentation of a given component, site or a project.&#x20;
-
 ### Project installation and set-up
+
+#### Git usage
+
+**Security**\
+[Generate an hardware security key to authenticate to GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)\
+\
+**Configuration**\
+
+
+_First, a quick review: Git uses a series of configuration files to determine non-default behavior that you may want. The first place Git looks for these values is in the system-wide `[path]/etc/gitconfig` file, which contains settings that are applied to every user on the system and all of their repositories. If you pass the option `--system` to `git config`, it reads and writes from this file specifically._
+
+_The next place Git looks is the `~/.gitconfig` (or `~/.config/git/config`) file, which is specific to each user. You can make Git read and write to this file by passing the `--global` option._ Aliases are stored in \~/.gitconfig.
+
+_Finally, Git looks for configuration values in the configuration file in the Git directory (`.git/config`) of whatever repository you’re currently using. These values are specific to that single repository, and represent passing the `--local` option to `git config`. If you don’t specify which level you want to work with, this is the default._
+
+_Each of these “levels” (system, global, local) overwrites values in the previous level, so values in `.git/config` trump those in `[path]/etc/gitconfig`, for instance.\\_
+
+Source: [https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration](https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
 
 To install the project you should run the commands, bellow.\
 [https://github.com/ec-europa/toolkit/blob/ce6278216dc58e7324f51c83c0a423ab52edb6f3/docs/installing-project.md](https://github.com/ec-europa/toolkit/blob/ce6278216dc58e7324f51c83c0a423ab52edb6f3/docs/installing-project.md)\
@@ -82,6 +92,14 @@ Start by cloning GIT reference repo:\
 
 By default, docker-compose reads two files, a `docker-compose.yml` and an optional `docker-compose.override.yml` file. By convention, the `docker-compose.yml` contains your base configuration and it is committed to the repository. This file contains a webserver, a mysql server and a selenium server. It very closely matches the environment the website is deployed on.
 
+**Using Docker Compose**
+
+To run the containerised environment, you can follow these steps to set it up, using Docker Compose.
+
+Run: `docker-compose up -d`
+
+This will set up and run the environment. After spawning, please follow the set of commands specified in the documentation of a given component, site or a project.&#x20;
+
 **Create a docker-compose.override** file to add settings for existent services (ASDA credentials for web service) or to add entirely new services. **This file is never committed to the repository.**
 
 **Create a docker-compose.override** file to add settings for existent services (ASDA credentials for web service) or to add entirely new services. **This file is never committed to the repository.**
@@ -89,32 +107,16 @@ By default, docker-compose reads two files, a `docker-compose.yml` and an option
 If it's a fresh install:\
 `docker-compose exec web ./vendor/bin/run toolkit:download-dump`
 
-Then, perform a clone installation with production data:\
-`docker-compose exec web ./vendor/bin/run toolkit:install-clone`
-
-### Git configuration
-
 #### Set-up SSH from your EC2 instance
 
 [https://medium.com/sonabstudios/setting-up-github-on-aws-cloud9-with-ssh-2545c4f989ea](https://medium.com/sonabstudios/setting-up-github-on-aws-cloud9-with-ssh-2545c4f989ea)
 
 #### Aliases
 
-Aliases are stored in \~/.gitconfig.\
-\
-Now you’ll learn a few of the more interesting options that you can set in this manner to customize your Git usage.
+Then, perform a clone installation with production data:\
+`docker-compose exec web ./vendor/bin/run toolkit:install-clone`
 
-First, a quick review: Git uses a series of configuration files to determine non-default behavior that you may want. The first place Git looks for these values is in the system-wide `[path]/etc/gitconfig` file, which contains settings that are applied to every user on the system and all of their repositories. If you pass the option `--system` to `git config`, it reads and writes from this file specifically.
-
-The next place Git looks is the `~/.gitconfig` (or `~/.config/git/config`) file, which is specific to each user. You can make Git read and write to this file by passing the `--global` option.
-
-Finally, Git looks for configuration values in the configuration file in the Git directory (`.git/config`) of whatever repository you’re currently using. These values are specific to that single repository, and represent passing the `--local` option to `git config`. If you don’t specify which level you want to work with, this is the default.
-
-Each of these “levels” (system, global, local) overwrites values in the previous level, so values in `.git/config` trump those in `[path]/etc/gitconfig`, for instance.\\
-
-
-
-[https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration](https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
+###
 
 ## Collaborating
 
