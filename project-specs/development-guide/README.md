@@ -54,11 +54,22 @@ Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)\
 
 ### Git usage
 
-**Security**\
-****\
-****[Generate an hardware security key to authenticate to GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)\
-[Adding a new SSH key to your GitHub account\
-](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)\
+**Security**
+
+You can generate a key with this command:\
+`$ ssh-keygen -b 4096 -t rsa -f /home/ec2-user/.ssh/id_rsa`
+
+On the remote system, add the contents of your public key file (for example, `~/id_rsa.pub`) to a new line in your `~/.ssh/authorized_keys` file; on the command line, enter:\
+`$ cat ~/id_rsa.pub >> ~/.ssh/authorized_keys`
+
+You may want to check the contents of \~/.ssh/authorized\_keys to make sure your public key was added properly; on the command line, enter:\
+`$ more ~/.ssh/authorized_keys`[\
+](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
+
+Sources: \
+[Creating/Converting/Move SSH keys to the right place\
+](https://webgate.ec.europa.eu/fpfis/wikis/pages/viewpage.action?pageId=297601060#id-6.C9,SSH\&PhpStorm-Configurationfileforscripts)[Generate an hardware security key to authenticate to GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)\
+[Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)\
 <mark style="color:yellow;">**Configuration**</mark>\ <mark style="color:yellow;"></mark>_<mark style="color:yellow;">First, a quick review: Git uses a series of configuration files to determine non-default behavior that you may want. The first place Git looks for these values is in the system-wide</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`[path]/etc/gitconfig`</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">file, which contains settings that are applied to every user on the system and all of their repositories. If you pass the option</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`--system`</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">to</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`git config`</mark><mark style="color:yellow;">, it reads and writes from this file specifically.</mark>_
 
 _<mark style="color:yellow;">The next place Git looks is the</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`~/.gitconfig`</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">(or</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`~/.config/git/config`</mark><mark style="color:yellow;">) file, which is specific to each user. You can make Git read and write to this file by passing the</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`--global`</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">option.</mark>_ <mark style="color:yellow;"></mark><mark style="color:yellow;">Aliases are stored in \~/.gitconfig.</mark>
