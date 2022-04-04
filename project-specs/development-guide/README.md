@@ -61,16 +61,19 @@ sudo mv composer.phar /usr/local/bin/composer
 ```
 
 Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)\
+[https://getcomposer.org/doc/faqs/how-to-install-untrusted-packages-safely.md](https://getcomposer.org/doc/faqs/how-to-install-untrusted-packages-safely.md)\
+\
 
 
 ### Configure C9 <a href="#title-text" id="title-text"></a>
 
-2 profiles are available: [Lamp Profile](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/4.+Configure+C9#id-4.ConfigureC9-LampProfile) and [Docker profile](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/4.+Configure+C9#id-4.ConfigureC9-Dockerprofile).\
-\
-**Docker profile installation**\
-****`sudo salt-call state.apply profiles.docker`
+#### [Docker profile](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/4.+Configure+C9#id-4.ConfigureC9-Dockerprofile) <a href="#id-4.configurec9-2profilesareavailable" id="id-4.configurec9-2profilesareavailable"></a>
 
-**Specific version**\
+****\
+**Docker profile installation**\
+****`sudo salt-call state.apply profiles.docker`\
+``\
+``**Specific version**\
 ****`sudo` `salt-call state.apply profiles.docker pillar='{"docker":{"php_version":"7.4"}}`
 
 #### Docker-compose
