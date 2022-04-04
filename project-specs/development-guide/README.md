@@ -20,10 +20,6 @@ Create your Cloud 9 instance:
 
 Source: [https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/2.+Create+my+C9+environment](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/2.+Create+my+C9+environment)
 
-#### Set-up SSH from your EC2 instance
-
-[https://medium.com/sonabstudios/setting-up-github-on-aws-cloud9-with-ssh-2545c4f989ea](https://medium.com/sonabstudios/setting-up-github-on-aws-cloud9-with-ssh-2545c4f989ea)
-
 #### Initialize
 
 After creating the environment, it is compulsory to initialise it with the script provided by DevOps:\
@@ -119,6 +115,10 @@ Then, perform a clone installation with production data:\
 `docker-compose exec web ./vendor/bin/run toolkit:install-clone`
 
 ### Git configuration
+
+#### Set-up SSH from your EC2 instance
+
+[https://medium.com/sonabstudios/setting-up-github-on-aws-cloud9-with-ssh-2545c4f989ea](https://medium.com/sonabstudios/setting-up-github-on-aws-cloud9-with-ssh-2545c4f989ea)
 
 #### Aliases
 
