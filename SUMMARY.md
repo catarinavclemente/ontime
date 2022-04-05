@@ -9,7 +9,7 @@
 * [Environment](project-specs/development-guide/README.md)
   * [Theme](project-specs/development-guide/theme.md)
   * [Bash](project-specs/development-guide/bash.md)
-* [Cloud9 server](project-specs/cloud9-server.md)
+* [Docker-compose](project-specs/docker-compose.md)
 * [Further topics](project-specs/further-topics/README.md)
   * [Configuration system](project-specs/further-topics/configuration-system.md)
   * [Content management strategies](project-specs/further-topics/content-management-strategies.md)
