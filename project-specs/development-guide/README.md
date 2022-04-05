@@ -118,9 +118,7 @@ Sources: \
 Then, perform a clone installation with production data:\
 `docker-compose exec web ./vendor/bin/run toolkit:install-clone`
 
-###
-
-## Collaborating
+## Collaborating (WIP)
 
 On GitHub, create a fork from the EC repo.\
 ec-europa: _https://github.com/ec-europa/\<project-name_>-reference
