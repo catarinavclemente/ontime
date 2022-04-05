@@ -69,6 +69,27 @@ dc exec web ./vendor/bin/run toolkit:build-dev
 dc exec web ./vendor/bin/run toolkit:install-clean
 ```
 
+**Using Docker Compose**
+
+To run the containerised environment, you can follow these steps to set it up, using Docker Compose.
+
+Run: `docker-compose up -d`
+
+This will set up and run the environment. After spawning, please follow the set of commands specified in the documentation of a given component, site or a project.&#x20;
+
+**Create a docker-compose.override** file to add settings for existent services (ASDA credentials for web service) or to add entirely new services. **This file is never committed to the repository.**
+
+**Create a docker-compose.override** file to add settings for existent services (ASDA credentials for web service) or to add entirely new services. **This file is never committed to the repository.**
+
+**If it's a fresh install:**
+
+```
+dc exec web ./vendor/bin/run toolkit:download-dump
+dc exec web ./vendor/bin/run toolkit:install-clone
+```
+
+****
+
 ### Git usage
 
 **Security**
@@ -87,21 +108,6 @@ Sources: \
 [Creating/Converting/Move SSH keys to the right place\
 ](https://webgate.ec.europa.eu/fpfis/wikis/pages/viewpage.action?pageId=297601060#id-6.C9,SSH\&PhpStorm-Configurationfileforscripts)[Generate an hardware security key to authenticate to GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)\
 [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
-
-**Using Docker Compose**
-
-To run the containerised environment, you can follow these steps to set it up, using Docker Compose.
-
-Run: `docker-compose up -d`
-
-This will set up and run the environment. After spawning, please follow the set of commands specified in the documentation of a given component, site or a project.&#x20;
-
-**Create a docker-compose.override** file to add settings for existent services (ASDA credentials for web service) or to add entirely new services. **This file is never committed to the repository.**
-
-**Create a docker-compose.override** file to add settings for existent services (ASDA credentials for web service) or to add entirely new services. **This file is never committed to the repository.**
-
-If it's a fresh install:\
-`docker-compose exec web ./vendor/bin/run toolkit:download-dump`
 
 #### Set-up SSH from your EC2 instance
 
