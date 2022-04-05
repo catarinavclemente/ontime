@@ -52,6 +52,13 @@ Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)\
 
 `$ sudo` `salt-call state.apply profiles.docker pillar='{"docker":{"php_version":"7.4"}}`
 
+### Project installation
+
+Start by cloning GIT reference repo:\
+`$ git clone git@github.com:ec-europa/<repository-name>.git`
+
+Add the 'VIRTUAL\_HOST' variable to your '.env.dist' file.
+
 #### Install the project
 
 ```
@@ -77,34 +84,7 @@ You may want to check the contents of \~/.ssh/authorized\_keys to make sure your
 Sources: \
 [Creating/Converting/Move SSH keys to the right place\
 ](https://webgate.ec.europa.eu/fpfis/wikis/pages/viewpage.action?pageId=297601060#id-6.C9,SSH\&PhpStorm-Configurationfileforscripts)[Generate an hardware security key to authenticate to GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)\
-[Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)\
-<mark style="color:yellow;">**Configuration**</mark>\ <mark style="color:yellow;"></mark>_<mark style="color:yellow;">First, a quick review: Git uses a series of configuration files to determine non-default behavior that you may want. The first place Git looks for these values is in the system-wide</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`[path]/etc/gitconfig`</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">file, which contains settings that are applied to every user on the system and all of their repositories. If you pass the option</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`--system`</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">to</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`git config`</mark><mark style="color:yellow;">, it reads and writes from this file specifically.</mark>_
-
-_<mark style="color:yellow;">The next place Git looks is the</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`~/.gitconfig`</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">(or</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`~/.config/git/config`</mark><mark style="color:yellow;">) file, which is specific to each user. You can make Git read and write to this file by passing the</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`--global`</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">option.</mark>_ <mark style="color:yellow;"></mark><mark style="color:yellow;">Aliases are stored in \~/.gitconfig.</mark>
-
-_<mark style="color:yellow;">Finally, Git looks for configuration values in the configuration file in the Git directory (</mark><mark style="color:yellow;">`.git/config`</mark><mark style="color:yellow;">) of whatever repository you’re currently using. These values are specific to that single repository, and represent passing the</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`--local`</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">option to</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`git config`</mark><mark style="color:yellow;">. If you don’t specify which level you want to work with, this is the default.</mark>_
-
-_<mark style="color:yellow;">Each of these “levels” (system, global, local) overwrites values in the previous level, so values in</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`.git/config`</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">trump those in</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;">`[path]/etc/gitconfig`</mark><mark style="color:yellow;">, for instance.\\</mark>_
-
-<mark style="color:yellow;">Source:</mark> [<mark style="color:yellow;">https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration</mark>](https://www.git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)<mark style="color:yellow;"></mark>
-
-### Project configuration
-
-Start by cloning GIT reference repo:\
-`$ git clone git@github.com:ec-europa/<repository-name>.git`
-
-Add the 'VIRTUAL\_HOST' variable to your '.env' file.
-
-
-
-Run usual commands:
-
-```
-$ [root@ip-172-XX-XX-XX MYWEBSITE]# composer install
-$ [root@ip-172-XX-XX-XX MYWEBSITE]# ./vendor/bin/run toolkit:build-dev
-$ [root@ip-172-XX-XX-XX MYWEBSITE]# ./vendor/bin/run toolkit:install-clean
-$ [root@ip-172-XX-XX-XX MYWEBSITE]# ./vendor/bin/drush
-```
+[Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)
 
 **Using Docker Compose**
 
