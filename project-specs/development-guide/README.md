@@ -94,6 +94,7 @@ Run usual commands:
 $ [root@ip-172-XX-XX-XX MYWEBSITE]# composer install
 $ [root@ip-172-XX-XX-XX MYWEBSITE]# ./vendor/bin/run toolkit:build-dev
 $ [root@ip-172-XX-XX-XX MYWEBSITE]# ./vendor/bin/run toolkit:install-clean
+$ [root@ip-172-XX-XX-XX MYWEBSITE]# ./vendor/bin/drush
 ```
 
 **Using Docker Compose**
