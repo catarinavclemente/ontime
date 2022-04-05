@@ -52,7 +52,7 @@ Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)\
 
 `$ sudo` `salt-call state.apply profiles.docker pillar='{"docker":{"php_version":"7.4"}}`
 
-#### `Install the project`
+#### Install the project
 
 ```
 dc exec web composer install
