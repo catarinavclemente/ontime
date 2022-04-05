@@ -87,8 +87,7 @@ Start by cloning GIT reference repo:\
 
 Add the 'VIRTUAL\_HOST' variable to your '.env' file.
 
-Connect to container using [docker-compose exec](https://docs.docker.com/compose/reference/exec/):\
-`$ docker-compose exec web bash`
+
 
 Run usual commands:
 
