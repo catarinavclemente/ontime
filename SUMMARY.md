@@ -20,3 +20,7 @@
 ## Group 1
 
 * [Gitbook](group-1/gitbook.md)
+
+***
+
+* [GIT](git.md)
