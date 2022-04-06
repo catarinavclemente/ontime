@@ -10,6 +10,7 @@
   * [Theme](project-specs/development-guide/theme.md)
   * [Bash](project-specs/development-guide/bash.md)
   * [🐞 Troubleshooting](project-specs/development-guide/troubleshooting.md)
+  * [Docker](project-specs/development-guide/docker.md)
 * [Docker-compose](project-specs/docker-compose.md)
 * [Further topics](project-specs/further-topics/README.md)
   * [Configuration system](project-specs/further-topics/configuration-system.md)
