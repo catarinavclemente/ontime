@@ -54,6 +54,8 @@ Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)\
 
 `Source:` [`https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/4.+Configure+C9`](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/4.+Configure+C9)``
 
+
+
 ### Project installation
 
 Start by cloning GIT reference repo:\
@@ -113,12 +115,15 @@ Sources: \
 
 [https://medium.com/sonabstudios/setting-up-github-on-aws-cloud9-with-ssh-2545c4f989ea](https://medium.com/sonabstudios/setting-up-github-on-aws-cloud9-with-ssh-2545c4f989ea)
 
-#### Aliases
 
-Then, perform a clone installation with production data:\
-`docker-compose exec web ./vendor/bin/run toolkit:install-clone`
 
-## Collaborating (WIP)
+**Saving locally**\
+****`git stash` temporarily shelves (or _stashes_) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on. Stashing is handy if you need to quickly switch context and work on something else, but you're mid-way through a code change and aren't quite ready to commit.\
+[https://www.atlassian.com/git/tutorials/saving-changes/git-stash](https://www.atlassian.com/git/tutorials/saving-changes/git-stash)
+
+
+
+#### Collaborating (WIP)
 
 On GitHub, create a fork from the EC repo.\
 ec-europa: _https://github.com/ec-europa/\<project-name_>-reference
