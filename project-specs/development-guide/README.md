@@ -123,7 +123,7 @@ You can generate a key with this command:\
 `$ ssh-keygen -b 4096 -t rsa -f /home/ec2-user/.ssh/id_rsa`
 
 On the remote system, add the contents of your public key file (for example, `~/id_rsa.pub`) to a new line in your `~/.ssh/authorized_keys` file; on the command line, enter:\
-`$ cat` /home/ec2-user/.ssh/id\_rsa.pub. `>> ~/.ssh/authorized_keys`
+`$ cat ~/id_rsa.pub >> ~/.ssh/authorized_keys`
 
 You may want to check the contents of \~/.ssh/authorized\_keys to make sure your public key was added properly; on the command line, enter:\
 `$ more ~/.ssh/authorized_keys`[\
