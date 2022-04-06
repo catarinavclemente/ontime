@@ -11,7 +11,7 @@
 Run
 
 ```php
-#amazon-linux-extras list | grep php 
+#amazon-linux-extras list | grep php amazon-linux-extras list | grep php 
 ```
 
 to list _available_ and _disalbe_ all shows **enabled**
