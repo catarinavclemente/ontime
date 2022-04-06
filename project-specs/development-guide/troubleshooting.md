@@ -50,3 +50,7 @@ grep xdebug /etc/php.d/*.ini
 ```
 
 If Xdebug was installed separately by a manual process and you manually modified the main `/etc/php.ini` to load the extension and configure its settings, that would explain why Xdebug otherwise works while you still see errors about its nonexistence at `/usr/lib/php/modules/xdebug.so`. This also could have happened if configuration files from `/etc` were copied from an old 32bit system to a 64bit system wherein modules reside at `/usr/lib64/php/modules`
+
+``
+
+<mark style="color:red;">**Failed to save file, EACCESS permision denied**</mark>\ <mark style="color:red;">**``**</mark>sudo chown -R ec2-user:ec2-user /path/to/folder
