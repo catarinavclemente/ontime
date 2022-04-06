@@ -45,6 +45,8 @@ $ php composer-setup.php
 $ sudo mv composer.phar /usr/local/bin/composer
 ```
 
+**`Composer (version 2.3.3) successfully installed to: /home/ec2-user/environment/composer.phar`**
+
 Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)\
 [https://getcomposer.org/doc/faqs/how-to-install-untrusted-packages-safely.md](https://getcomposer.org/doc/faqs/how-to-install-untrusted-packages-safely.md)
 
