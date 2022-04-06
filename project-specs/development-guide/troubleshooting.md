@@ -1,6 +1,6 @@
 # 🐞 Troubleshooting
 
-PHP Fatal error: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.2.24. in /home/ec2-user/environment/just-ejustice-reference/vendor/composer/platform\_check.php on line 24
+<mark style="color:red;">**PHP Fatal error: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 7.4.0". You are running 7.2.24. in /home/ec2-user/environment/just-ejustice-reference/vendor/composer/platform\_check.php on line 24**</mark>
 
 ```php
 #sudo amazon-linux-extras disable php7.2 
@@ -39,7 +39,7 @@ Once we are done with installation verify
 php -v
 ```
 
-#### Failed loading /usr/lib64/php/modules/xdebug.so: /usr/lib64/php/modules/xdebug.so: undefined symbol: gc\_globals
+#### <mark style="color:red;">Failed loading /usr/lib64/php/modules/xdebug.so: /usr/lib64/php/modules/xdebug.so: undefined symbol: gc\_globals</mark>
 
 In GNU/Linux systems derived from modern Red Hat releases (such as RHEL, Fedora, and CentOS), the PHP distribution may be divided into the primary .ini file residing at `/etc/php.ini` as well as a collection of other .ini files specific to extensions or packages installed as RPMs residing in `/etc/php.d`. At initialization, PHP will read `/etc/php.d/*.ini` after loading the main `php.ini` file.
 
