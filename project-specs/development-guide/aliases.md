@@ -16,16 +16,46 @@ cloud9GetPublicIP="curl http://169.254.169.254/latest/meta-data/public-ipv4 && e
 cloud9EC2Reboot='aws ec2 reboot-instances --instance-ids="$(curl http://169.254.169.254/latest/meta-data/instance-id)"'DOCKER d or dc
 ```
 
-alias dps='docker ps' alias dc='docker-compose' alias dcup='dc up -d --remove-orphans' alias dcstart='dc start' alias dcrestart='dc restart' alias dcstop='dc stop' alias dcdown='dc down --volumes --remove-orphans'
+## Docker d or c
+
+```
+dps='docker ps'
+dc='docker-compose' 
+dcup='dc up -d --remove-orphans' 
+dcstart='dc start' 
+dcrestart='dc restart' 
+dcstop='dc stop' 
+dcdown='dc down --volumes --remove-orphans'
+```
 
 ## fast find
 
-alias ff='find . -name $1'
+`ff='find . -name $1'`
 
 ## change directories easily
 
-alias cdenv="cd \~/environment/" alias ..='cd ..' alias ...='cd ../..' alias ....='cd ../../..' alias .....='cd ../../../..'
+```
+cdenv="cd ~/environment/"
+..='cd ..' 
+ ...='cd ../..' 
+....='cd ../../..' 
+.....='cd ../../../..'
+```
 
 ## GIT g
 
-alias gs='git status -sb' alias gd='git diff' alias gco='git checkout' alias ga='git add' alias gap='git add -p' alias grm='git rm' alias gb='git branch -v' alias gc='git commit' alias gca='git commit --amend' alias gcm='git commit -m' alias gll='git pull' alias gsh='git push' alias glog='git log --graph --pretty=format:"%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+```
+gs='git status -sb' 
+gd='git diff'
+gco='git checkout'
+ga='git add' 
+gap='git add -p'
+grm='git rm'
+gb='git branch -v'
+gc='git commit'
+gca='git commit --amend' 
+gcm='git commit -m' 
+gll='git pull' 
+gsh='git push' 
+glog='git log --graph --pretty=format:"%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+```
