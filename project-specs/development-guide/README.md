@@ -139,7 +139,7 @@ Sources: \
 Then, clone the GIT reference repo:\
 `$ git clone git@github.com:ec-europa/<repository-name>.git`
 
-Add the 'VIRTUAL\_HOST' variable to your '.env.dist' file.
+**Add the 'VIRTUAL\_HOST' variable to your '.env.dist' file.**
 
 #### Install the project
 
