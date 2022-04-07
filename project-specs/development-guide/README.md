@@ -249,11 +249,21 @@ After install-clone
 
 Administrative theme with a responsive, mobile-first layout and a strong focus on improving the Editorial ExperienceRequires:&#x20;
 
-* Theme Negotiation by Rules (disabled)
+* Theme Negotiation by Rules (disabled)\
+  dc exec web ./vendor/bin/drush en theme\_rule
 
-Then, enable eJustice Admin Theme.
+Then, enable eJustice Admin Theme.\
+dc exec web ./vendor/bin/drush then ejp\_adm\_theme\
+\
+Then \
+dc exec web ./vendor/bin/drush config-set system.theme admin ejp\_adm\_theme
 
 
+
+Then \
+dc exec web ./vendor/bin/drush cex --no\
+\
+Analyse... keep calm and carry on
 
 ### Vim
 
