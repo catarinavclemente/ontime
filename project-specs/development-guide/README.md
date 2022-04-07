@@ -246,6 +246,7 @@ The process of configuration sync involves 3 steps:
 Site specs 07-04-2022\
 \
 After install-clone
+-------------------
 
 Administrative theme with a responsive, mobile-first layout and a strong focus on improving the Editorial ExperienceRequires:&#x20;
 
