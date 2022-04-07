@@ -225,16 +225,35 @@ services:
     class: Drupal\Core\Cache\NullBackendFactory
 ```
 
-###
+### Synchronize configuration
 
-### Routine
+The process of configuration sync involves 3 steps:
 
-`docker-compose up -d`\
-Starts the containers in the background and leaves them running.\
+1. Export: export the full configuration as YAML files from one instance of a site. \
+   install-clone
+2. Import: stage the configuration on a second instance of the site and compare the differences.\
+   `dc exec web ./vendor/bin/drush cim`
+3. Synchronize: move the staged configuration from the first site into the active configuration of the second site.\
+   \
+   Check the state of the working directory and the staging area\
+   Check configurations status:\
+   `./vendor/bin/drush config:status`\\
+
+
+
+
+
+Site specs 07-04-2022\
 \
-Check the state of the working directory and the staging area\
-Check configurations status:\
-`./vendor/bin/drush config:status`\\
+After install-clone
+
+Administrative theme with a responsive, mobile-first layout and a strong focus on improving the Editorial ExperienceRequires:&#x20;
+
+* Theme Negotiation by Rules (disabled)
+
+Then, enable eJustice Admin Theme.
+
+
 
 ### Vim
 
