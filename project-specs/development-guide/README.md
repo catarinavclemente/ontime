@@ -166,6 +166,27 @@ dc exec web ./vendor/bin/run toolkit:download-dump
 dc exec web ./vendor/bin/run toolkit:install-clone
 ```
 
+### Configure your development environment
+
+The code at the bottom of your _sites/default/settings.php_ file should look like this:\
+
+
+```
+// Load environment development override configuration, if available.
+// Keep this code block at the end of this file to take full effect.
+if (file_exists($app_root . '/' . $site_path . '/settings.override.php')) {
+  include $app_root . '/' . $site_path . '/settings.override.php';
+}
+```
+
+#### Copy example.settings.local.php
+
+Copy _sites/example.settings.local.php_ to _sites/default/_settings.override.php, and [clear the cache](https://drupalize.me/tutorial/clear-drupals-cache).
+
+###
+
+###
+
 ### Routine
 
 `docker-compose up -d`\
