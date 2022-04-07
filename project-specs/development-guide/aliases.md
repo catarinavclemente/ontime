@@ -2,13 +2,19 @@
 
 ## Basic commands
 
-alias grep='grep --color=tty' alias ls='/bin/ls -A --color=auto -hp --time-style="+%F %T"' alias ll='ls -al' alias rf='readlink -f' alias vi='vim' alias diff='colordiff -b -B -r --exclude=.svn --exclude=.git' alias hgrep='history | grep'
+```
+grep='grep --color=tty'
+ls='/bin/ls -A --color=auto -hp --time-style="+%F %T"' alias ll='ls -al' alias rf='readlink -f' alias vi='vim' 
+diff='colordiff -b -B -r --exclude=.svn --exclude=.git' 
+hgrep='history | grep'
+```
 
 ## cloud9 Aliases
 
-alias cloud9GetPublicIP="curl http://169.254.169.254/latest/meta-data/public-ipv4 && echo ''" alias cloud9EC2Reboot='aws ec2 reboot-instances --instance-ids="$(curl http://169.254.169.254/latest/meta-data/instance-id)"'
-
-## DOCKER d or dc
+```
+cloud9GetPublicIP="curl http://169.254.169.254/latest/meta-data/public-ipv4 && echo ''" 
+cloud9EC2Reboot='aws ec2 reboot-instances --instance-ids="$(curl http://169.254.169.254/latest/meta-data/instance-id)"'DOCKER d or dc
+```
 
 alias dps='docker ps' alias dc='docker-compose' alias dcup='dc up -d --remove-orphans' alias dcstart='dc start' alias dcrestart='dc restart' alias dcstop='dc stop' alias dcdown='dc down --volumes --remove-orphans'
 
