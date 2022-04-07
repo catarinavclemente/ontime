@@ -15,7 +15,7 @@ theme-status        => status theme
 
 
 
-
+<mark style="color:orange;">**Config:**</mark>\ <mark style="color:orange;">**Set default theme in ejp\_profile/config/system.theme.yml**</mark>
 
 
 
