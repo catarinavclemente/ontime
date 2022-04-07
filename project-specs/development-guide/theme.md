@@ -19,11 +19,8 @@ theme-status        => status theme
 
 #### Create a database backup (dump)
 
-You can use Drush to export your database to a _.sql_ text file, like so:
-
-```php
-drush sql-dump > drupal8.sql
-```
+You can use Drush to export your database to a _.sql_ text file, like so:\
+`drush sql-dump > drupal9.sql`
 
 Where _drupal8.sql_ is whatever meaningful filename you want to use to name your database export.
 
