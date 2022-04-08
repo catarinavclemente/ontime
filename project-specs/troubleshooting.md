@@ -57,3 +57,7 @@ _<mark style="color:red;">**User warning**</mark>_<mark style="color:red;">**: m
 
 sudo chmod -R 777 web/sites/default/files\
 Then, clear the cache.
+
+
+
+<mark style="color:red;">**Cannot create phar '/home/ec2-user/environment/just-ejustice-reference/vendor/composer/tmp-b8b7a644b84bbce0671024c04f6d**</mark>\ <mark style="color:red;">**01da', file extension (or combination) not recognised or the directory does not exist**</mark>\ <mark style="color:red;">****</mark>\ <mark style="color:red;">**Due to open-europa version**</mark>
