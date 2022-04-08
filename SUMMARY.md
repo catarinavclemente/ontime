@@ -16,7 +16,7 @@
     * [Useful commands](project-specs/development-guide/docker/docker-1.md)
   * [GIT](project-specs/development-guide/git.md)
   * [Database](project-specs/development-guide/database.md)
-  * [Page 1](project-specs/development-guide/page-1.md)
+  * [Drush](project-specs/development-guide/drush.md)
 * [Theme](project-specs/theme/README.md)
   * [OE theme](project-specs/theme/oe-theme.md)
 * [🐞 Troubleshooting](project-specs/troubleshooting.md)
