@@ -56,3 +56,4 @@ If Xdebug was installed separately by a manual process and you manually modified
 _<mark style="color:red;">**User warning**</mark>_<mark style="color:red;">**: mkdir(): Permission Denied in**</mark><mark style="color:red;">** **</mark>_<mark style="color:red;">**Drupal\Component\PhpStorage\FileStorage->createDirectory()**</mark>_<mark style="color:red;">** **</mark><mark style="color:red;">**(line**</mark><mark style="color:red;">** **</mark>_<mark style="color:red;">**123**</mark>_<mark style="color:red;">** **</mark><mark style="color:red;">**of**</mark><mark style="color:red;">** **</mark>_<mark style="color:red;">**core/lib/Drupal/Component/PhpStorage/FileStorage.php**</mark>_<mark style="color:red;">**).**</mark>
 
 sudo chmod -R 777 web/sites/default/files\
+Then, clear the cache.
