@@ -91,7 +91,7 @@ Then, clone the GIT reference repo:\
 ```
 dc exec web composer install
 dc exec web ./vendor/bin/run toolkit:build-dev
-dc exec web ./vendor/bin/run toolkit:install-clean
+dc exec web ./vendor/bin/run toolkit:install-clone
 ```
 
 **Using Docker Compose**
@@ -107,11 +107,20 @@ This will set up and run the environment. After spawning, please follow the set 
 **If it's a fresh install:**
 
 ```
-dc exec web ./vendor/bin/run toolkit:download-dump
+# Run composer install in the web service.
+docker-compose exec web composer install
+# Build your development instance of the website.
+docker-compose exec web ./vendor/bin/run toolkit:build-dev
+# Perform a clone installation with production data in
+# development mode. This will automatically disable caching and enable
+# development modules like devel, devel_generate and kint.
 dc exec web ./vendor/bin/run toolkit:install-clone
 ```
 
-###
+_<mark style="color:red;">**User warning**</mark>_<mark style="color:red;">**: mkdir(): Permission Denied in**</mark><mark style="color:red;">** **</mark>_<mark style="color:red;">**Drupal\Component\PhpStorage\FileStorage->createDirectory()**</mark>_<mark style="color:red;">** **</mark><mark style="color:red;">**(line**</mark><mark style="color:red;">** **</mark>_<mark style="color:red;">**123**</mark>_<mark style="color:red;">** **</mark><mark style="color:red;">**of**</mark><mark style="color:red;">** **</mark>_<mark style="color:red;">**core/lib/Drupal/Component/PhpStorage/FileStorage.php**</mark>_<mark style="color:red;">**).**</mark>
+
+sudo chmod -R 777 web/sites/default/files\
+Then, clear the cache.
 
 ### Vim
 
