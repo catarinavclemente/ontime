@@ -38,7 +38,7 @@ $ node -v
 $ npm -v
 ```
 
-#### &#x20;Install and setup composer <a href="#id-4.configurec9-dockerprofile" id="id-4.configurec9-dockerprofile"></a>
+#### Install and setup composer <a href="#id-4.configurec9-dockerprofile" id="id-4.configurec9-dockerprofile"></a>
 
 ```
 $ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
@@ -52,15 +52,13 @@ $ sudo mv composer.phar /usr/local/bin/composer
 Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)\
 [https://getcomposer.org/doc/faqs/how-to-install-untrusted-packages-safely.md](https://getcomposer.org/doc/faqs/how-to-install-untrusted-packages-safely.md)
 
-#### `` <a href="#id-4.configurec9-2profilesareavailable" id="id-4.configurec9-2profilesareavailable"></a>
+#### \`\` <a href="#id-4.configurec9-2profilesareavailable" id="id-4.configurec9-2profilesareavailable"></a>
 
-`Source:` [`https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/4.+Configure+C9`](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/4.+Configure+C9)``
+`Source:` [`https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/4.+Configure+C9`](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/4.+Configure+C9)\`\`
 
 ### Project installation
 
 Start by making sure you have the correct access rights to the remote GitHub repository.
-
-
 
 Then, clone the GIT reference repo:\
 `$ git clone git@github.com:ec-europa/<repository-name>.git`
@@ -81,7 +79,7 @@ To run the containerised environment, you can follow these steps to set it up, u
 
 Run: `docker-compose up -d`
 
-This will set up and run the environment. After spawning, please follow the set of commands specified in the documentation of a given component, site or a project.&#x20;
+This will set up and run the environment. After spawning, please follow the set of commands specified in the documentation of a given component, site or a project.
 
 **Create a docker-compose.override** file to add settings for existent services (ASDA credentials for web service) or to add entirely new services. **This file is never committed to the repository.**
 
@@ -98,7 +96,7 @@ docker-compose exec web ./vendor/bin/run toolkit:build-dev
 dc exec web ./vendor/bin/run toolkit:install-clone
 ```
 
-_<mark style="color:red;">**User warning**</mark>_<mark style="color:red;">**: mkdir(): Permission Denied in**</mark><mark style="color:red;">** **</mark>_<mark style="color:red;">**Drupal\Component\PhpStorage\FileStorage->createDirectory()**</mark>_<mark style="color:red;">** **</mark><mark style="color:red;">**(line**</mark><mark style="color:red;">** **</mark>_<mark style="color:red;">**123**</mark>_<mark style="color:red;">** **</mark><mark style="color:red;">**of**</mark><mark style="color:red;">** **</mark>_<mark style="color:red;">**core/lib/Drupal/Component/PhpStorage/FileStorage.php**</mark>_<mark style="color:red;">**).**</mark>
+_<mark style="color:red;">**User warning**</mark>_<mark style="color:red;">**: mkdir(): Permission Denied in**</mark><mark style="color:red;">\*\*</mark> <mark style="color:red;"></mark>_<mark style="color:red;">**Drupal\Component\PhpStorage\FileStorage->createDirectory()**</mark>_ (line\*\*<mark style="color:red;">\*\*</mark> <mark style="color:red;"></mark>_<mark style="color:red;">**123**</mark>_ <mark style="color:red;">**of**</mark> _<mark style="color:red;">**core/lib/Drupal/Component/PhpStorage/FileStorage.php**</mark>_).\*\*
 
 sudo chmod -R 777 web/sites/default/files\
 Then, clear the cache.

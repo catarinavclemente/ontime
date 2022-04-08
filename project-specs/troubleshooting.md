@@ -51,13 +51,11 @@ grep xdebug /etc/php.d/*.ini
 
 If Xdebug was installed separately by a manual process and you manually modified the main `/etc/php.ini` to load the extension and configure its settings, that would explain why Xdebug otherwise works while you still see errors about its nonexistence at `/usr/lib/php/modules/xdebug.so`. This also could have happened if configuration files from `/etc` were copied from an old 32bit system to a 64bit system wherein modules reside at `/usr/lib64/php/modules`
 
-``
+\`\`
 
-_<mark style="color:red;">**User warning**</mark>_<mark style="color:red;">**: mkdir(): Permission Denied in**</mark><mark style="color:red;">** **</mark>_<mark style="color:red;">**Drupal\Component\PhpStorage\FileStorage->createDirectory()**</mark>_<mark style="color:red;">** **</mark><mark style="color:red;">**(line**</mark><mark style="color:red;">** **</mark>_<mark style="color:red;">**123**</mark>_<mark style="color:red;">** **</mark><mark style="color:red;">**of**</mark><mark style="color:red;">** **</mark>_<mark style="color:red;">**core/lib/Drupal/Component/PhpStorage/FileStorage.php**</mark>_<mark style="color:red;">**).**</mark>
+_<mark style="color:red;">**User warning**</mark>_<mark style="color:red;">**: mkdir(): Permission Denied in**</mark><mark style="color:red;">\*\*</mark> <mark style="color:red;"></mark>_<mark style="color:red;">**Drupal\Component\PhpStorage\FileStorage->createDirectory()**</mark>_ (line\*\*<mark style="color:red;">\*\*</mark> <mark style="color:red;"></mark>_<mark style="color:red;">**123**</mark>_ <mark style="color:red;">**of**</mark> _<mark style="color:red;">**core/lib/Drupal/Component/PhpStorage/FileStorage.php**</mark>_).\*\*
 
 sudo chmod -R 777 web/sites/default/files\
 Then, clear the cache.
 
-
-
-0/1 \[>-----] 0% Update of openeuropa/oe\_theme failed\ <mark style="color:red;">**Cannot create phar '/home/ec2-user/environment/just-ejustice-reference/vendor/composer/tmp-b8b7a644b84bbce0671024c04f6d**</mark>\ <mark style="color:red;">**01da', file extension (or combination) not recognised or the directory does not exist**</mark>\ <mark style="color:red;">****</mark>
+0/1 \[>-----] 0% Update of openeuropa/oe\_theme failed\ <mark style="color:red;">**Cannot create phar '/home/ec2-user/environment/just-ejustice-reference/vendor/composer/tmp-b8b7a644b84bbce0671024c04f6d**</mark>\ <mark style="color:red;">**01da', file extension (or combination) not recognised or the directory does not exist**</mark>\ <mark style="color:red;">\*\*\*\*</mark>
