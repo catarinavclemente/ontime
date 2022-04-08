@@ -7,6 +7,7 @@
 * [Design system](project-specs/design-system.md)
 * [Project settings](project-specs/project-settings.md)
 * [Environment](project-specs/development-guide/README.md)
+  * [Page 1](project-specs/development-guide/page-1.md)
   * [Development environment](project-specs/development-guide/development-environment.md)
   * [Bash](project-specs/development-guide/bash/README.md)
     * [Aliases](project-specs/development-guide/bash/aliases.md)
