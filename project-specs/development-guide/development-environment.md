@@ -24,8 +24,6 @@ if (file_exists($app_root . '/' . $site_path . '/settings.override.php')) {
 
 Copy _sites/example.settings.local.php_ to sites/default/\_settings.override.php, and [clear the cache](https://drupalize.me/tutorial/clear-drupals-cache).
 
-####
-
 ### How to override configuration
 
 [https://drupalize.me/tutorial/how-override-configuration?p=2458](https://drupalize.me/tutorial/how-override-configuration?p=2458)
