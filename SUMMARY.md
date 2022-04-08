@@ -14,6 +14,7 @@
   * [Docker](project-specs/development-guide/docker.md)
   * [GIT](project-specs/development-guide/git.md)
   * [Aliases](project-specs/development-guide/aliases.md)
+  * [Development environment](project-specs/development-guide/development-environment.md)
 * [Docker-compose](project-specs/docker-compose.md)
 * [Further topics](project-specs/further-topics/README.md)
   * [Configuration system](project-specs/further-topics/configuration-system.md)
