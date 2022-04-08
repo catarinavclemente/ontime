@@ -25,8 +25,15 @@ docker-compose exec web ./vendor/bin/run toolkit:install-clone-dev
 ```
 
 \
-\
-<mark style="color:yellow;">As soon as you have a fresh install, export the active configuration to the YML files \[WIP]</mark>\
-This command below will, afterwards, remove all of the items from the Git index (not from the working directory or local repository), and then will update the Git index, while respecting Git ignores. _PS. Index = Cache_
+Synchronize configuration and remove all of the items from GIT index
 
-git rm -r --cached . && git add . && git commit -am "EJPREV: Remove ignored files."
+Check the state of the working directory and the staging area\
+Check configurations status:\
+`./vendor/bin/drush config:status`
+
+Export: stage the configuration on your dev instance of the site and compare the differences.\
+`dc exec web ./vendor/bin/drush cex`\
+``\
+``This command below will, afterwards, remove all of the items from the Git index (not from the working directory or local repository), and then will update the Git index, while respecting Git ignores. _PS. Index = Cache_
+
+<mark style="background-color:orange;">git rm -r --cached . && git add . && git commit -am "EJPREV: Remove ignored files."</mark>
