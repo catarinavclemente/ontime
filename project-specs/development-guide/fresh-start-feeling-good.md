@@ -1,6 +1,6 @@
 # Fresh start - Feeling Good
 
-### Install the project
+### Install, set-up and clone the project
 
 Run composer install in the web service.\
 `docker-compose exec web composer install`\

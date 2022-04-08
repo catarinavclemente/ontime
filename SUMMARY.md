@@ -14,9 +14,11 @@
   * [Docker](project-specs/development-guide/docker/README.md)
     * [Docker-compose](project-specs/development-guide/docker/docker-compose.md)
     * [Useful commands](project-specs/development-guide/docker/docker-1.md)
-  * [GIT](project-specs/development-guide/page-1.md)
+  * [GIT](project-specs/development-guide/git.md)
   * [Database](project-specs/development-guide/database.md)
-* [Theme](project-specs/theme.md)
+  * [Page 1](project-specs/development-guide/page-1.md)
+* [Theme](project-specs/theme/README.md)
+  * [OE theme](project-specs/theme/oe-theme.md)
 * [🐞 Troubleshooting](project-specs/troubleshooting.md)
 * [Further topics](project-specs/further-topics/README.md)
   * [Configuration system](project-specs/further-topics/configuration-system.md)
@@ -26,7 +28,3 @@
 ## Group 1
 
 * [Gitbook](group-1/gitbook.md)
-
-***
-
-* [GIT](git.md)
