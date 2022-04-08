@@ -104,7 +104,7 @@ This will set up and run the environment. After spawning, please follow the set 
 
 **Create a docker-compose.override** file to add settings for existent services (ASDA credentials for web service) or to add entirely new services. **This file is never committed to the repository.**
 
-**If it's a fresh install:**
+#### **If it's a fresh install:** <a href="#install" id="install"></a>
 
 ```
 # Run composer install in the web service.
