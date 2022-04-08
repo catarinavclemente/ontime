@@ -15,7 +15,7 @@
     * [Docker-compose](project-specs/development-guide/docker/docker-compose.md)
     * [Useful commands](project-specs/development-guide/docker/docker-1.md)
   * [GIT](project-specs/development-guide/page-1.md)
-  * [Page 1](project-specs/development-guide/page-1-1.md)
+  * [Database](project-specs/development-guide/database.md)
 * [Theme](project-specs/theme.md)
 * [🐞 Troubleshooting](project-specs/troubleshooting.md)
 * [Further topics](project-specs/further-topics/README.md)
