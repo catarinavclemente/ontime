@@ -225,6 +225,12 @@ services:
     class: Drupal\Core\Cache\NullBackendFactory
 ```
 
+### How to override configuration
+
+[https://drupalize.me/tutorial/how-override-configuration?p=2458](https://drupalize.me/tutorial/how-override-configuration?p=2458)
+
+
+
 ### Synchronize configuration
 
 The process of configuration sync involves 3 steps:
