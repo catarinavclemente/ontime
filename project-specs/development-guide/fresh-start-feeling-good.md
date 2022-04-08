@@ -1,8 +1,5 @@
 # Fresh start - Feeling Good
 
-\
-
-
 #### Installing the project
 
 ```
@@ -25,7 +22,7 @@ docker-compose exec web ./vendor/bin/run toolkit:install-clone-dev
 ```
 
 \
-Synchronize configuration and remove all of the items from GIT index
+ON A BRAND NEW BRANCH: Synchronize configuration and remove all of the items from GIT index
 
 Check the state of the working directory and the staging area\
 Check configurations status:\
@@ -36,4 +33,4 @@ Export: stage the configuration on your dev instance of the site and compare the
 ``\
 ``This command below will, afterwards, remove all of the items from the Git index (not from the working directory or local repository), and then will update the Git index, while respecting Git ignores. _PS. Index = Cache_
 
-<mark style="background-color:orange;">git rm -r --cached . && git add . && git commit -am "EJPREV: Remove ignored files."</mark>
+<mark style="background-color:orange;">git rm -r --cached . && git add . && git commit -am "EJPREV-00: Remove ignored files."</mark>
