@@ -4,6 +4,11 @@ description: Local configurations
 
 # Development environment
 
+### Tools for developing in Drupal
+
+Xdebug - PHP debugger\
+
+
 ### Configure your development environment
 
 The code at the bottom of your _sites/default/settings.php_ file should look like this:\

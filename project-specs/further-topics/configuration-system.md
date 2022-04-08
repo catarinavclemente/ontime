@@ -25,7 +25,7 @@ Since Drupal 8, the configuration API is, therefore, an indispensable tool.
 
 The configuration API comes in two flavors - the (simple) Config API and the Configuration Entity API. The key difference is that the Config API is the singleton use case. A singleton is where there can be only a single instance of this configuration. A good example would be the site's name.
 
-The Configuration Entity API, however, is used to store multiple sets of configuration - for example node types, views, vocabularies, and fields.\
+The **Configuration Entity API**, however, is used to store multiple sets of configuration - for example node types, views, vocabularies, and fields.\
 &#x20;In this [article](https://www.drupal.org/node/2120523#s-simple-configuration-vs-configuration-entities), you can have a more deep analysis of these differences.\
 And if you want to [create a configuration entity type](https://www.drupal.org/node/1809494), check this page on drupal.org.\
 
