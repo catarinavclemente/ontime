@@ -63,7 +63,8 @@ Start by making sure you have the correct access rights to the remote GitHub rep
 Then, clone the GIT reference repo:\
 `$ git clone git@github.com:ec-europa/<repository-name>.git`
 
-**Add the 'VIRTUAL\_HOST' variable to your '.env.dist' file.**
+**Add the 'VIRTUAL\_HOST' variable to your '.env.dist' file.**\
+****VIRTUAL\_HOST=[http://web:8080/web](http://web:8080/web)
 
 
 
