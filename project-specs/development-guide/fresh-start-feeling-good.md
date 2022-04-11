@@ -2,11 +2,19 @@
 
 ### Backup
 
-1. ./vendor/bin/drush sql-create -y
-2. gunzip < mysql.gz | mysql -uroot -hmysql ejustice
-3. ./vendor/bin/run toolkit:run-deploy
-4. ./vendor/bin/drush updatedb -y
-5. ./vendor/bin/drush cim -y
-6. ./vendor/bin/drush cr\
+1.
+
+    ```
+    drush cr
+    drush sql-dump > ~/new.sql
+    ```
+2. Creating database ejustice. Any existing database will be dropped!\
+   `./vendor/bin/drush sql-create -y`&#x20;
+3. docker-compose exec web ./vendor/bin/drush sql-dump > ejustice.sql
+4. gunzip < mysql.gz | mysql -uroot -hmysql ejustice
+5. ./vendor/bin/run toolkit:run-deploy
+6. ./vendor/bin/drush updatedb -y
+7. ./vendor/bin/drush cim -y
+8. ./vendor/bin/drush cr\
    ``\
    ``
