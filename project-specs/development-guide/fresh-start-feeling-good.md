@@ -1,5 +1,10 @@
 # Fresh start - Feeling Good
 
+### Create a backup
+
+**Backup the database with Drush**\
+dc exec web ./vendor/bin/drush sql:dump --gzip --structure-tables-list="cache,cache\_\*" --result-file='/mysql\_\[date\_time].sql'
+
 ### Install, set-up and clone the project
 
 Run composer install in the web service.\
