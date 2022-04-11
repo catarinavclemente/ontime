@@ -3,14 +3,14 @@
 Drush commands
 
 ```ini
-theme-enable        => drush theme-enable (drush then)
-theme-disable       => drush theme-uninstall (drush thun)
-theme-info          => pm-info
-theme-list          => pm-list --type=theme
-theme-list-enabled  => pm-list --type=theme --status=enabled
-theme-set-default   => drush config-set system.theme default [theme_name] 
-theme-set-admin     => drush config-set system.theme admin [theme_name] 
-theme-status        => status theme
+theme-enable        => dc exec web ./vendor/bin/drush theme-enable (drush then)
+theme-disable       => dc exec web ./vendor/bin/drush theme-uninstall (drush thun)
+theme-info          => dc exec web ./vendor/bin/drush pm-info
+theme-list          => dc exec web ./vendor/bin/drush pm-list --type=theme
+theme-list-enabled  => dc exec web ./vendor/bin/drush pm-list --type=theme --status=enabled
+theme-set-default   => dc exec web ./vendor/bin/drush config-set system.theme default [theme]
+theme-set-admin     => dc exec web ./vendor/bin/drush config-set system.theme admin [theme] 
+theme-status        => dc exec web ./vendor/bin/drush status theme
 ```
 
 <mark style="color:orange;">**Config:**</mark>\ <mark style="color:orange;">**Set default theme in ejp\_profile/config/system.theme.yml**</mark>
