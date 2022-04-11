@@ -1,10 +1,8 @@
 # Fresh start - Feeling Good
 
-### Create a backup
+### Backup
 
-1. **Backup the database with Drush**\
-   dc exec web ./vendor/bin/drush sql:dump --gzip --structure-tables-list="cache,cache\_\*" --result-file='/ejustice.sql'
-2. `dc exec web ./vendor/bin/drush sql-connect < web/ejustice.sql`
+### [https://gorannikolovski.com/blog/drupal-backup-my-simple-strategy-backup-database-and-files](https://gorannikolovski.com/blog/drupal-backup-my-simple-strategy-backup-database-and-files)
 
 ### Install, set-up and clone the project
 
