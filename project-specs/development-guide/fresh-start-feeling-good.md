@@ -1,5 +1,7 @@
 # Fresh start - Feeling Good
 
+&#x20;**./vendor/bin/run toolkit:download-dump --dumpfile dump.sql**
+
 ### Backup
 
 1.
