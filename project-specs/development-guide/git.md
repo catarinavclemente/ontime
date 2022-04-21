@@ -78,13 +78,17 @@ We can use this functionality naming our fork's branch **"deploy",** so in order
 
 ![](../../.gitbook/assets/image2020-8-13\_15-37-0.png)
 
-Keep in mind that you can go straight to ACC but a QA review will be needed before lead PROD (unless you are hosted in a dedicated server, then deploy into PROD is under your own risk).
-
-\
+Keep in mind that you can go straight to ACC but a QA review will be needed before lead PROD (unless you are hosted in a dedicated server, then deploy into PROD is under your own risk).\
 Source: [https://webgate.ec.europa.eu/fpfis/wikis/x/4YZMQ](https://webgate.ec.europa.eu/fpfis/wikis/x/4YZMQ)
-
-
 
 This command below will, afterwards, remove all of the items from the Git index (not from the working directory or local repository), and then will update the Git index, while respecting Git ignores. _PS. Index = Cache_
 
 <mark style="background-color:orange;">git rm -r --cached . && git add . && git commit -am "EJPREV-00: Remove ignored files."</mark>
+
+<mark style="background-color:orange;"></mark>
+
+### git reflog
+
+<mark style="background-color:orange;"></mark>[<mark style="background-color:orange;">https://www.atlassian.com/git/tutorials/rewriting-history/git-reflog</mark>](https://www.atlassian.com/git/tutorials/rewriting-history/git-reflog)<mark style="background-color:orange;"></mark>
+
+<mark style="background-color:orange;"></mark>
