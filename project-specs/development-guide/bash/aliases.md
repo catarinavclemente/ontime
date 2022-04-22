@@ -1,5 +1,10 @@
 # Aliases
 
+{% hint style="info" %}
+After adding the aliases to the .bashrc file, run:\
+`source ~/.bashrc`
+{% endhint %}
+
 ## Basic commands
 
 ```
