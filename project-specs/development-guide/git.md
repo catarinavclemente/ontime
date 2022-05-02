@@ -44,8 +44,8 @@ you git@github.com:you/common\_repo.git (push)
 co\_worker git@github.com:co\_worker/common\_repo.git (fetch\
 coworker git@github.com:coworker/common\_repo.git (push)\_\
 \_\_\
-\_origin git@github.com:\_organization/common\_repo.git (fetch)\
-origin git@github.com:organization/common\_repo.git (push)
+upstream git@github.com:\_organization/common\_repo.git (fetch)\
+upstream git@github.com:organization/common\_repo.git (push)
 
 It is good practice to keep the feature branch always up to date with [trunk](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development).\
 If your branch is recent, the first option is to use rebase.
