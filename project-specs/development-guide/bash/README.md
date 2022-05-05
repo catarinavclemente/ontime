@@ -14,7 +14,7 @@ And you can create/edit your own bash aliases file(s).\
 
 After adding/editing your alias file, activate alias by typing the following source command:
 
-`source ~/.bash_aliases`
+`source .00-catarina.aliases.sh`
 
 \
 \
