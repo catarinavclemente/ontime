@@ -14,7 +14,7 @@ Run
 #amazon-linux-extras list | grep php
 ```
 
-to list _available_ and _disalbe_ all shows **enabled**
+to list _available_ and _disable_ all shows **enabled**
 
 ```php
  15  php7.2                          available    \
