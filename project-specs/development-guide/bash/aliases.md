@@ -1,5 +1,11 @@
 # Aliases
 
+.... /home/ec2-user/.bashrc.d/\
+cd ec2-user/.bashrc.d \
+sudo vim 00-catarina.aliases.sh\
+\
+
+
 {% hint style="info" %}
 After adding the aliases to the .bashrc file, run:\
 `source ~/.bashrc`
