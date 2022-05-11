@@ -25,6 +25,7 @@
   * [Configuration system](project-specs/further-topics/configuration-system.md)
   * [Content management strategies](project-specs/further-topics/content-management-strategies.md)
 * [ATLAS CMS](project-specs/atlas-cms.md)
+* [Xdebug](project-specs/xdebug.md)
 
 ## Group 1
 
