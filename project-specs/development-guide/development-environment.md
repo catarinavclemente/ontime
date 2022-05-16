@@ -26,25 +26,8 @@ Copy _sites/example.settings.local.php_ to sites/default/\_settings.override.php
 \
 
 
-Site specs 07-04-2022\
-\
-After install-clone
--------------------
+**Dev configuration**
 
-Administrative theme with a responsive, mobile-first layout and a strong focus on improving the Editorial ExperienceRequires:
-
-* Theme Negotiation by Rules (disabled)\
-  dc exec web ./vendor/bin/drush en theme\_rule
-
-Then, enable eJustice Admin Theme.\
-dc exec web ./vendor/bin/drush then ejp\_adm\_theme\
-\
-Then\
-dc exec web ./vendor/bin/drush config-set system.theme admin ejp\_adm\_theme
-
-Then\
-dc exec web ./vendor/bin/drush cex --no\
-\
-Analyse... keep calm and carry on
+dcdrush config-split:import config\_split.config\_split.dev
 
 [https://drupalize.me/topic/back-your-drupal-site](https://drupalize.me/topic/back-your-drupal-site)
