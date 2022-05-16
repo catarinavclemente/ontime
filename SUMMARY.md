@@ -7,6 +7,7 @@
 * [Design system](project-specs/design-system.md)
 * [Project settings](project-specs/project-settings.md)
 * [Environment](project-specs/development-guide/README.md)
+  * [Drupal](project-specs/development-guide/drupal.md)
   * [Drupal Console](project-specs/development-guide/drupal-console.md)
   * [Development environment](project-specs/development-guide/development-environment.md)
   * [Fresh start - Feeling Good](project-specs/development-guide/fresh-start-feeling-good.md)
