@@ -36,7 +36,7 @@ After adding the aliases to the .bashrc file, run:\
 
 ## Fast find
 
-ff='find . -name $1'
+`ff='find . -name $1'`
 
 ## Move up directories
 
