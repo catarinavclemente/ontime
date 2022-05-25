@@ -21,8 +21,8 @@ After adding the aliases to the .bashrc file, run:\
 
 ## cloud9 Aliases
 
-cloud9GetPublicIP="curl http://169.254.169.254/latest/meta-data/public-ipv4 && echo ''"\
-cloud9EC2Reboot='aws ec2 reboot-instances --instance-ids="$(curl http://169.254.169.254/latest/meta-data/instance-id)"'
+`cloud9GetPublicIP="curl http://169.254.169.254/latest/meta-data/public-ipv4 && echo ''"`\
+`cloud9EC2Reboot='aws ec2 reboot-instances --instance-ids="$(curl http://169.254.169.254/latest/meta-data/instance-id)"'`
 
 ## DOCKER d or dc
 
