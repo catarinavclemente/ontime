@@ -12,6 +12,6 @@ drush config-get system.site uuid
 
 Take note of the long string that is returned. This is your site's UUID.
 
-### Drush commands to administer themes <a href="#page-subtitle" id="page-subtitle"></a>
+### Drush commands to administer modules and themes <a href="#page-subtitle" id="page-subtitle"></a>
 
-[https://www.drupal.org/project/drush/issues/530780](https://www.drupal.org/project/drush/issues/530780)
+[https://drupalize.me/tutorial/enable-update-and-manage-modules-and-themes-drush?p=3516](https://drupalize.me/tutorial/enable-update-and-manage-modules-and-themes-drush?p=3516)
