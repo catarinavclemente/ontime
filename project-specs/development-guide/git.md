@@ -19,7 +19,10 @@ Sources:\
 [Creating/Converting/Move SSH keys to the right place\
 ](https://webgate.ec.europa.eu/fpfis/wikis/pages/viewpage.action?pageId=297601060#id-6.C9,SSH\&PhpStorm-Configurationfileforscripts)[Generate an hardware security key to authenticate to GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)\
 [Adding a new SSH key to your GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)\
-\
+
+
+**GIT aliases**\
+[https://alblue.bandlem.com/2011/04/git-tip-of-week-aliases.html](https://alblue.bandlem.com/2011/04/git-tip-of-week-aliases.html)\
 \
 **Saving locally**\
 \*\*\*\*`git stash` temporarily shelves (or _stashes_) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on. Stashing is handy if you need to quickly switch context and work on something else, but you're mid-way through a code change and aren't quite ready to commit.\
