@@ -77,8 +77,3 @@ Run: `docker-compose up -d`
 This will set up and run the environment. After spawning, please follow the set of commands specified in the documentation of a given component, site or a project.
 
 **Create a docker-compose.override** file to add settings for existent services (ASDA credentials for web service) or to add entirely new services. **This file is never committed to the repository.**
-
-### Vim
-
-:w ! sudo tee %\
-para forçar a escrita num arquivo sem permissão de escrita.
