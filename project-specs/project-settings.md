@@ -1,6 +1,4 @@
----
-description: Development Environment
----
+# Infrastructure
 
-# Project settings
+### Server/Environmental Details (Dev/QA/Prod/)
 
