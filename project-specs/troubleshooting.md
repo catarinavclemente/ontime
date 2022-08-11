@@ -53,23 +53,5 @@ If Xdebug was installed separately by a manual process and you manually modified
 
 \`\`
 
-_<mark style="color:red;">**User warning**</mark>_<mark style="color:red;">**: mkdir(): Permission Denied in**</mark><mark style="color:red;">\*\*</mark> <mark style="color:red;"></mark>_<mark style="color:red;">**Drupal\Component\PhpStorage\FileStorage->createDirectory()**</mark>_ (line\*\*<mark style="color:red;">\*\*</mark> <mark style="color:red;"></mark>_<mark style="color:red;">**123**</mark>_ <mark style="color:red;">**of**</mark> _<mark style="color:red;">**core/lib/Drupal/Component/PhpStorage/FileStorage.php**</mark>_).\*\*
 
-sudo chmod -R 777 web/sites/default/files\
-Then, clear the cache.
-
-0/1 \[>-----] 0% Update of openeuropa/oe\_theme failed\ <mark style="color:red;">**Cannot create phar '/home/ec2-user/environment/just-ejustice-reference/vendor/composer/tmp-b8b7a644b84bbce0671024c04f6d**</mark>\ <mark style="color:red;">**01da', file extension (or combination) not recognised or the directory does not exist**</mark>\ <mark style="color:red;">\*\*\*\*</mark>
-
-<mark style="color:red;"></mark>
-
-_<mark style="color:red;">**User warning**</mark>_<mark style="color:red;">**: mkdir(): Permission Denied in**</mark><mark style="color:red;">\*\*</mark> <mark style="color:red;"></mark>_<mark style="color:red;">**Drupal\Component\PhpStorage\FileStorage->createDirectory()**</mark>_ (line\*\*<mark style="color:red;">\*\*</mark> <mark style="color:red;"></mark>_<mark style="color:red;">**123**</mark>_ <mark style="color:red;">**of**</mark> _<mark style="color:red;">**core/lib/Drupal/Component/PhpStorage/FileStorage.php**</mark>_).\*\*
-
-sudo chmod -R 777 web/sites/default/files\
-Then, clear the cache.
-
-
-
-
-
-npm ERR! peer dep missing: rollup@>=0.66.0 <2, required by rollup-plugin-uglify@6.0.4 npm ERR! peer dep missing: eslint@^7.5.0 || ^8.0.0, required by @babel/eslint-parser@7.17.0
 
