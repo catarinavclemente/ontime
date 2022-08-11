@@ -47,8 +47,6 @@ $ php composer-setup.php
 $ sudo mv composer.phar /usr/local/bin/composer
 ```
 
-**`Composer (version 2.3.3) successfully installed to: /home/ec2-user/environment/composer.phar`**
-
 Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)\
 [https://getcomposer.org/doc/faqs/how-to-install-untrusted-packages-safely.md](https://getcomposer.org/doc/faqs/how-to-install-untrusted-packages-safely.md)
 
@@ -56,24 +54,3 @@ Source: [https://getcomposer.org/download/](https://getcomposer.org/download/)\
 
 `Source:` [`https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/4.+Configure+C9`](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/4.+Configure+C9)\`\`
 
-### Project installation
-
-Start by making sure you have the correct access rights to the remote GitHub repository.
-
-Then, clone the GIT reference repo:\
-`$ git clone git@github.com:ec-europa/<repository-name>.git`
-
-**Add the 'VIRTUAL\_HOST' variable to your '.env.dist' file.**\
-****VIRTUAL\_HOST=[http://web:8080/web](http://web:8080/web)
-
-
-
-**Set-up and run the environment with Docker Compose**
-
-To run the containerised environment, you can follow these steps to set it up, using Docker Compose.
-
-Run: `docker-compose up -d`
-
-This will set up and run the environment. After spawning, please follow the set of commands specified in the documentation of a given component, site or a project.
-
-**Create a docker-compose.override** file to add settings for existent services (ASDA credentials for web service) or to add entirely new services. **This file is never committed to the repository.**

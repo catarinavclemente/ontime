@@ -22,12 +22,4 @@ Copy _sites/example.settings.local.php_ to sites/default/\_settings.override.php
 
 ### How to override configuration
 
-[https://drupalize.me/tutorial/how-override-configuration?p=2458](https://drupalize.me/tutorial/how-override-configuration?p=2458)\
-\
-
-
-**Dev configuration**
-
-dcdrush config-split:import config\_split.config\_split.dev
-
-[https://drupalize.me/topic/back-your-drupal-site](https://drupalize.me/topic/back-your-drupal-site)
+[https://drupalize.me/tutorial/how-override-configuration?p=2458](https://drupalize.me/tutorial/how-override-configuration?p=2458)
