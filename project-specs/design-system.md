@@ -1,4 +1,4 @@
-# Design system
+# Theme requirements
 
 Being an official website of the European Union, the JUST-ejustice project follows the [EU branding rules and guidelines](https://wikis.ec.europa.eu/display/WEBGUIDE/02.+EU+branded+websites+design).
 
