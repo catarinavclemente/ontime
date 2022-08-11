@@ -1,8 +1,8 @@
-# Environment
+# Installation
 
 ### C9
 
-Request a new Cloud 9 instance (at this moment you should email Giancarlo Di NATALE)\
+Request a new Cloud 9 instance addressed to our IT Development and Support contact point (Emilian-Cristian.LUNGU@ext.ec.europa.eu) with the PM (Vasileios.PAPASPYROU@ext.ec.europa.eu) in CC.\
 \
 Create your Cloud 9 instance:
 

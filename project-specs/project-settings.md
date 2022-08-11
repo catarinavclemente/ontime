@@ -1,5 +1,6 @@
-# Infrastructure
+---
+description: Development Environment
+---
 
-### Server/Environmental Details (Dev/QA/Prod/)
+# Project settings
 
-[https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/AWS+Cloud9](https://webgate.ec.europa.eu/fpfis/wikis/display/MULTISITE/AWS+Cloud9)
