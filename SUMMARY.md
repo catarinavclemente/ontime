@@ -17,7 +17,6 @@
   * [Drush](project-specs/development-guide/drush.md)
   * [Xdebug](project-specs/development-guide/xdebug.md)
 * [Theme](project-specs/theme/README.md)
-  * [OE theme](project-specs/theme/oe-theme.md)
   * [Theme requirements](project-specs/design-system.md)
 * [🐞 Troubleshooting](project-specs/troubleshooting.md)
 * [Further topics](project-specs/further-topics/README.md)
