@@ -19,11 +19,3 @@ If Xdebug was installed separately by a manual process and you manually modified
 <figure><img src="../.gitbook/assets/Screenshot 2022-12-09 140432.png" alt=""><figcaption><p>Can't download database dump </p></figcaption></figure>
 
 Run docker-compose exec web ./vendor/bin/run toolkit:download-dump --define toolkit.clone.asda\_type=default
-
-## EasyRdf\Exception: Unsupported URI scheme&#x20;
-
-If someone come across this issue it is due to DRUPAL\_SPARQL\_HOSTNAME in your config file returning null.\
-Add to .env:\
-DRUPAL\_SPARQL\_HOSTNAME=sparql DRUPAL\_SPARQL\_PORT=8890 DRUPAL\_ACCOUNT\_USERNAME=admin DRUPAL\_ACCOUNT\_PASSWORD=admin
-
-\
