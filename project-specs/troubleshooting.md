@@ -16,5 +16,6 @@ If Xdebug was installed separately by a manual process and you manually modified
 
 \`\`
 
+<figure><img src="../.gitbook/assets/Screenshot 2022-12-09 140432.png" alt=""><figcaption><p>Can't download database dump </p></figcaption></figure>
 
-
+Run docker-compose exec web ./vendor/bin/run toolkit:download-dump --define toolkit.clone.asda\_type=default
