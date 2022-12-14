@@ -34,3 +34,11 @@ If they are anything but writeable, you can issue the following commands:
 ```php
 chmod 644 sites/default/settings.php 
 ```
+
+#### Display octal notation of permissions with -ls
+
+```
+stat -c '%A %a %h %U %G %s %y %n' *
+```
+
+[https://unix.stackexchange.com/questions/76521/how-can-i-display-octal-notation-of-permissions-with-ls-and-can-octal-represen](https://unix.stackexchange.com/questions/76521/how-can-i-display-octal-notation-of-permissions-with-ls-and-can-octal-represen)
