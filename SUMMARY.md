@@ -18,6 +18,7 @@
   * [Xdebug](project-specs/development-guide/xdebug.md)
 * [Theme](project-specs/theme/README.md)
   * [Theme requirements](project-specs/design-system.md)
+  * [NPM](project-specs/theme/npm.md)
 * [🐞 Troubleshooting](project-specs/troubleshooting.md)
 * [Further topics](project-specs/further-topics/README.md)
   * [Configuration system](project-specs/further-topics/configuration-system.md)
