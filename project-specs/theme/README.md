@@ -1,5 +1,7 @@
 # Theme
 
+dcdrupal site:mode dev
+
 Drush commands
 
 ```ini
