@@ -1,6 +1,6 @@
 # Table of contents
 
-* [JUST-ejustice](README.md)
+* [Project Help](README.md)
 
 ## Project specs
 

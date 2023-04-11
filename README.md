@@ -2,6 +2,6 @@
 coverY: 0
 ---
 
-# JUST-ejustice
+# Project Help
 
-Here you'll find everything you need to know about the Ejustice project.
+Here you'll find everything you need to know about the project.
