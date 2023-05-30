@@ -17,8 +17,8 @@ We're now ready to set up the new instance. The process will be unique to your e
 {% embed url="https://github.com/ec-europa/toolkit/blob/release/8.x/docs/building-assets.md" %}
 
 Import latest database.\
-Go to [https://files.fpfis.tech.ec.europa.eu/index.php/apps/files/?dir=/just-ejustice-reference/mysql\&fileid=149701157](https://files.fpfis.tech.ec.europa.eu/index.php/apps/files/?dir=/just-ejustice-reference/mysql\&fileid=149701157) and download the data base.
+Go to[ ](https://just-ejustice.acc.fpfis.tech.ec.europa.eu/sites/default/files/acc.sql.gz)[https://just-ejustice.acc.fpfis.tech.ec.europa.eu/sites/default/files/acc.sql.gz](https://just-ejustice.acc.fpfis.tech.ec.europa.eu/sites/default/files/acc.sql.gz) and download the data base.
 
 Then, run&#x20;
 
-`dcdrush sql:query --file='/home/ec2-user/environment/just-ejustice-reference/[name-of-the-file]gz.sql`
+`dcdrush sql:query --file='/home/ec2-user/environment/just-ejustice-reference/acc.sql.gz'`
