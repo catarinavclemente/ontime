@@ -21,4 +21,4 @@ Go to[ ](https://just-ejustice.acc.fpfis.tech.ec.europa.eu/sites/default/files/a
 
 Then, run&#x20;
 
-`dcdrush sql:query --file='/home/ec2-user/environment/just-ejustice-reference/acc.sql.gz'`
+`dcdrush sql:query --file='/home/ec2-user/environment/just-dev/acc.sql.gz'`
