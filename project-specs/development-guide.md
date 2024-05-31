@@ -62,31 +62,46 @@ To run the containerised environment, you can follow these steps to set it up, u
 
 Run: `docker-compose up -d`
 
-This will set up and run the environment. After spawning, please follow the set of commands specified in the documentation of a given component, site or a project.&#x20;
+This will set up and run the environment. After spawning, please follow the set of commands specified in the documentation of a given component, site or a project. Usually the next step is to execute Composer script to download and set up dependencies.\
+`docker-compose exec web ./vendor/bin/run drupal:site-install`
+
+Wait a few minutes and, finally, run:\
+`docker-compose exec web composer install`\
+\
+In order to tweak settings or adjust configuration of a specific container, please edit the `docker-compose.yml` file accordingly to your current needs.
 
 ### Setting up a project
 
-To install the project you should run the following commands:
+To install locally a project running Toolkit 4 you should run the following commands:
 
 Start by cloning GIT reference repo:\
 `git clone git@github.com:ec-europa/<repository-name>.git`
 
-By default, docker-compose reads two files, a `docker-compose.yml` and an optional `docker-compose.override.yml` file. By convention, the `docker-compose.yml` contains your base configuration and it is committed to the repository. This file contains a webserver, a mysql server and a selenium server. It very closely matches the environment the website is deployed on.
+#### Setting up the environment
+
+By default, docker-compose reads two files, a `docker-compose.yml` and an optional `docker-compose.override.yml` file. **By convention, the `docker-compose.yml` contains your base configuration and it is committed to the repository.** This file contains a webserver, a mysql server and a selenium server. It very closely matches the environment the website is deployed on.
 
 **Create a docker-compose.override** file to add settings for existent services (ASDA credentials for web service) or to add entirely new services. **This file is never committed to the repository.**
 
-\
-Check if `composer.json` has the correct requirements and run composer install in the web service:\
-`docker-compose exec web composer install`\
-\
-Then, build your development instance of the website, running:\
-`docker-compose exec web ./vendor/bin/run toolkit:build-dev`
+Check if composer.json has the correct requirements.\
+And then:
 
-If it's a fresh install:\
-`docker-compose exec web ./vendor/bin/run toolkit:download-dump`
+```
+docker-compose exec web composer install
+docker-compose exec web ./vendor/bin/run toolkit:build-dev
+```
 
-Then, perform a clone installation with production data:\
-`docker-compose exec web ./vendor/bin/run toolkit:install-clone`
+If it's a fresh install:
+
+```
+docker-compose exec web ./vendor/bin/run toolkit:download-dump
+```
+
+Then:
+
+```
+docker-compose exec web ./vendor/bin/run toolkit:install-clone
+```
 
 ### Git configuration
 
@@ -170,24 +185,3 @@ Starts the containers in the background and leaves them running.\
 Check the state of the working directory and the staging area\
 Check configurations status:\
 `./vendor/bin/drush config:status`\\
-
-### Bash
-
-`.bashrc` is a Bash [shell script](http://en.wikipedia.org/wiki/Shell\_script) that Bash runs whenever it is started interactively. It initializes an interactive shell session. You can put any command in that file that you could type at the command prompt.
-
-If you put commands here, you set up the shell for use in your particular environment, or to customize things to your preferences. A common thing to put in `.bashrc` are [aliases](http://en.wikipedia.org/wiki/Alias\_\(command\)) that you want to always be available.\
-\
-In the directory bellow, you'll find the devops alias file ()\
-\~/.bashrc.d/00-devops.aliases.sh\
-\
-And you can create/edit your own bash aliases file(s).\
-\~/.bashrc.d/00-\[your-user].aliases.sh\
-\
-[https://www.si.edu/tbma/resource/method-maintaining-bashrc-file-across-multiple-workstations-using-homebrew-and-github](https://www.si.edu/tbma/resource/method-maintaining-bashrc-file-across-multiple-workstations-using-homebrew-and-github)
-
-
-
-### Vim
-
-:w ! sudo tee %\
-para forçar a escrita num arquivo sem permissão de escrita.
