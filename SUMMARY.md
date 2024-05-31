@@ -21,6 +21,7 @@
   * [NPM](project-specs/theme/npm.md)
 * [🐞 Troubleshooting](project-specs/troubleshooting.md)
 * [Further topics](project-specs/further-topics/README.md)
+  * [Deployments](project-specs/further-topics/deployments.md)
   * [Configuration system](project-specs/further-topics/configuration-system.md)
   * [Content management strategies](project-specs/further-topics/content-management-strategies.md)
   * [Permissions](project-specs/further-topics/permissions.md)
