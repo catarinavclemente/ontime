@@ -45,7 +45,7 @@ You should check the configuration status regularly with the commands, bellow:\
 #### To export to sync directory
 
 `docker-compose exec web ./vendor/bin/drush cex`\
-``
+
 
 #### To import from sync directory
 
