@@ -4,6 +4,8 @@ Git usage
 
 **Security**
 
+[**https://www.howtogeek.com/devops/how-to-set-up-https-personal-access-tokens-for-github-authentication/**](https://www.howtogeek.com/devops/how-to-set-up-https-personal-access-tokens-for-github-authentication/)
+
 You can generate a key with this command:\
 `$ ssh-keygen -b 4096 -t rsa -f /home/ec2-user/.ssh/id_rsa`
 
@@ -88,10 +90,9 @@ This command below will, afterwards, remove all of the items from the Git index 
 
 <mark style="background-color:orange;">git rm -r --cached . && git add . && git commit -am "EJPREV-00: Remove ignored files."</mark>
 
-<mark style="background-color:orange;"></mark>
+
 
 ### git reflog
 
-<mark style="background-color:orange;"></mark>[<mark style="background-color:orange;">https://www.atlassian.com/git/tutorials/rewriting-history/git-reflog</mark>](https://www.atlassian.com/git/tutorials/rewriting-history/git-reflog)<mark style="background-color:orange;"></mark>
+[<mark style="background-color:orange;">https://www.atlassian.com/git/tutorials/rewriting-history/git-reflog</mark>](https://www.atlassian.com/git/tutorials/rewriting-history/git-reflog)
 
-<mark style="background-color:orange;"></mark>
