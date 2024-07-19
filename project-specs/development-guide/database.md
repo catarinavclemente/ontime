@@ -16,7 +16,14 @@ Go to[ ](https://just-ejustice.acc.fpfis.tech.ec.europa.eu/sites/default/files/a
 
 Then, run&#x20;
 
-`dcdrush sql:query --file='/home/ec2-user/environment/just-ejustice/acc.sql.gz'`
+`rename file to mysql.gz`\
+`run` dcdrush site:ssh
+
+run:\
+mv `mysql.gz /cache/mysql.gz`
+
+`exit and run:`\
+`tk-iclone`
 
 
 
